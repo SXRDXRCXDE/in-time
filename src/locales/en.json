@@ -1,0 +1,212 @@
+{
+    "nav": {
+        "services": "Services",
+        "cases": "Cases",
+        "process": "Process",
+        "reviews": "Reviews",
+        "about": "About",
+        "contact": "Discuss project"
+    },
+    "hero": {
+        "studio": "Digital development studio",
+        "title1": "Helping companies grow,",
+        "title2": "creating ",
+        "title3": "next level",
+        "words": [
+            "websites",
+            "apps",
+            "bots",
+            "automation"
+        ],
+        "description": "We develop digital products that help businesses grow and stand out from competitors",
+        "ctaPrimary": "Discuss project",
+        "ctaSecondary": "View cases"
+    },
+    "services": {
+        "tag": "Services",
+        "title": "Full cycle of digital product development",
+        "items": [
+            {
+                "title": "Websites",
+                "desc": "Corporate sites, landings and online stores with modern design and fast loading"
+            },
+            {
+                "title": "Apps",
+                "desc": "Mobile and web applications for iOS, Android and browsers with intuitive interface"
+            },
+            {
+                "title": "Chatbots",
+                "desc": "Smart bots for Telegram, WhatsApp and other platforms for communication automation"
+            },
+            {
+                "title": "Automation",
+                "desc": "Integrations, APIs and business process automation to increase efficiency"
+            },
+            {
+                "title": "UI/UX Design",
+                "desc": "User experience design and creation of visual solutions"
+            },
+            {
+                "title": "Backend",
+                "desc": "Development of server side, databases and cloud infrastructure"
+            }
+        ]
+    },
+    "cases": {
+        "tag": "Cases",
+        "title": "Featured Projects",
+        "button": "All cases",
+        "items": [
+            {
+                "title": "E-commerce Platform",
+                "cat": "Web Development",
+                "res": "+340% conversion"
+            },
+            {
+                "title": "Fintech Mobile App",
+                "cat": "iOS & Android",
+                "res": "500K+ downloads"
+            },
+            {
+                "title": "Corporate Portal",
+                "cat": "Enterprise",
+                "res": "x2 performance"
+            },
+            {
+                "title": "Retail Telegram Bot",
+                "cat": "Automation",
+                "res": "10K+ users"
+            }
+        ]
+    },
+    "advantages": {
+        "tag": "Why us",
+        "title": "Five reasons to work with us",
+        "items": [
+            {
+                "title": "Fast development",
+                "desc": "Launch MVP in 2-4 weeks. Agile approach allows us to adapt quickly to changes."
+            },
+            {
+                "title": "Transparent communication",
+                "desc": "Daily updates, access to task tracker and direct contact with the development team."
+            },
+            {
+                "title": "Quality guarantee",
+                "desc": "Testing at every stage, code review and 3 months of free support."
+            },
+            {
+                "title": "Expertise",
+                "desc": "Over 100 successful projects. Deep understanding of various business industries."
+            },
+            {
+                "title": "Reliable team",
+                "desc": "Close-knit team of senior specialists with experience in major projects."
+            }
+        ],
+        "stats": [
+            {
+                "value": "100+",
+                "label": "Projects"
+            },
+            {
+                "value": "8",
+                "label": "Years experience"
+            },
+            {
+                "value": "50+",
+                "label": "Clients"
+            },
+            {
+                "value": "15",
+                "label": "Specialists"
+            }
+        ]
+    },
+    "process": {
+        "tag": "Process",
+        "title": "How we work",
+        "steps": [
+            {
+                "title": "Consultation",
+                "desc": "Discussing your idea, goals and requirements. Forming the product vision."
+            },
+            {
+                "title": "Analytics",
+                "desc": "Market, competitor and target audience research. Preparing technical tasks."
+            },
+            {
+                "title": "Design",
+                "desc": "Creating prototypes and UI design. Approving every screen."
+            },
+            {
+                "title": "Development",
+                "desc": "Writing clean code, performing code reviews and testing."
+            },
+            {
+                "title": "Launch",
+                "desc": "Deploying the project, setting up analytics and monitoring."
+            },
+            {
+                "title": "Support",
+                "desc": "Developing the product, adding new features and optimizing."
+            }
+        ]
+    },
+    "testimonials": {
+        "tag": "Testimonials",
+        "title": "What our clients say",
+        "trust": "They trust us",
+        "items": [
+            {
+                "quote": "The team exceeded all our expectations. The project was completed on time, and the result exceeded our KPI by 200%.",
+                "author": "Alexey Petrov",
+                "role": "CEO, TechStart"
+            },
+            {
+                "quote": "Professional approach to every detail. Excellent communication and readiness to cooperate. Highly recommend!",
+                "author": "Maria Ivanova",
+                "role": "Product Manager, Fintech.io"
+            },
+            {
+                "quote": "Third project with this team. Always quality, always on time. Reliable partners for long-term cooperation.",
+                "author": "Dmitry Kozlov",
+                "role": "Founder, E-commerce Pro"
+            }
+        ]
+    },
+    "cta": {
+        "title": "Ready to discuss ",
+        "titleSpan": "your project",
+        "subtitle": "Tell us about your idea, and we will propose the optimal solution",
+        "name": "Name",
+        "namePlaceholder": "Your name",
+        "emailPlaceholder": "email@example.com",
+        "message": "Message",
+        "messagePlaceholder": "Tell us about your project...",
+        "response": "Usually respond within 24 hours",
+        "submit": "Send",
+        "toastTitle": "Request sent!",
+        "toastDesc": "We will contact you shortly."
+    },
+    "itpark": {
+        "tag": "Resident",
+        "title": "IT Park Uzbekistan Resident",
+        "desc": "In Time is an official resident of the Technological Park of Software Products and Information Technologies (IT Park). This confirms our status as a reliable IT partner, meeting international standards of quality and business transparency.",
+        "button": "View Certificate",
+        "status": "Official Status",
+        "quality": "Quality Standards",
+        "clickToEnlarge": "Click to enlarge",
+        "verified": "Verified",
+        "residentYear": "Resident 2025"
+    },
+    "footer": {
+        "desc": "We create digital products that help businesses grow",
+        "services": "Services",
+        "company": "Company",
+        "social": "Social",
+        "copy": "© 2024 In Time. All rights reserved.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Use"
+    }
+}

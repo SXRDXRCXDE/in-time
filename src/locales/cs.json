@@ -1,0 +1,204 @@
+{
+    "nav": {
+        "services": "Služby",
+        "cases": "Projekty",
+        "process": "Proces",
+        "reviews": "Recenze",
+        "about": "O nás",
+        "contact": "Probrat projekt"
+    },
+    "hero": {
+        "studio": "Digitální studio",
+        "title1": "Integrované",
+        "title2": "digitální ",
+        "title3": "pro vaše podnikání",
+        "words": [
+            "systémy",
+            "aplikace",
+            "boty",
+            "řešení"
+        ],
+        "description": "Navrhujeme a implementujeme automatizované systémy: web, aplikaci a bota — jako jednotný nástroj pro prodej a správu",
+        "ctaPrimary": "Probrat projekt",
+        "ctaSecondary": "Zobrazit projekty"
+    },
+    "services": {
+        "tag": "Služby",
+        "title": "Kompletní cyklus vývoje digitálních produktů",
+        "items": [
+            {
+                "title": "Weby",
+                "desc": "Firemní weby, landing page a e-shopy s moderním designem a rychlým načítáním"
+            },
+            {
+                "title": "Aplikace",
+                "desc": "Mobilní a webové aplikace pro iOS, Android a prohlížeče s intuitivním rozhraním"
+            },
+            {
+                "title": "Chatboti",
+                "desc": "Chytří boti pro Telegram, WhatsApp a další platformy pro automatizaci komunikace"
+            },
+            {
+                "title": "Automatizace",
+                "desc": "Integrace, API a automatizace obchodních procesů pro zvýšení efektivity"
+            },
+            {
+                "title": "UI/UX Design",
+                "desc": "Navrhování uživatelské zkušenosti a vytváření vizuálních řešení"
+            },
+            {
+                "title": "Backend",
+                "desc": "Vývoj serverové části, databází a cloudové infrastruktury"
+            }
+        ]
+    },
+    "cases": {
+        "tag": "Projekty",
+        "title": "Vybrané projekty",
+        "button": "Všechny projekty",
+        "items": [
+            {
+                "title": "E-commerce platforma",
+                "cat": "Webový vývoj",
+                "res": "+340% konverze"
+            },
+            {
+                "title": "Fintech mobilní aplikace",
+                "cat": "iOS & Android",
+                "res": "500K+ stažení"
+            },
+            {
+                "title": "Firemní portál",
+                "cat": "Enterprise",
+                "res": "x2 výkon"
+            },
+            {
+                "title": "Retail Telegram bot",
+                "cat": "Automatizace",
+                "res": "10K+ uživatelů"
+            }
+        ]
+    },
+    "advantages": {
+        "tag": "Proč my",
+        "title": "Důvody, proč s námi spolupracovat",
+        "items": [
+            {
+                "title": "Rychlý vývoj",
+                "desc": "MVP spouštíme za méně než týden. Agile přístup nám umožňuje rychle se přizpůsobit změnám."
+            },
+            {
+                "title": "Transparentní komunikace",
+                "desc": "Denní aktualizace, neustálý kontakt s námi ve všech fázích vývoje."
+            },
+            {
+                "title": "Mezinárodní zkušenost",
+                "desc": "Spolupracujeme s týmy a klienty z různých zemí: Evropy, Izraele a zemí SNS. Rozumíme rozdílům v trzích, mentalitě a očekáváních uživatelů — a zohledňujeme to v designu, logice produktu a komunikaci."
+            }
+        ],
+        "stats": [
+            {
+                "value": "100+",
+                "label": "Projektů"
+            },
+            {
+                "value": "4",
+                "label": "Roky zkušeností"
+            },
+            {
+                "value": "50+",
+                "label": "Klientů"
+            },
+            {
+                "value": "10",
+                "label": "Specialistů"
+            }
+        ]
+    },
+    "process": {
+        "tag": "Proces",
+        "title": "Jak pracujeme",
+        "steps": [
+            {
+                "title": "Konzultace",
+                "desc": "Prodiskutujeme váš nápad, cíle a požadavky. Formujeme vizi produktu."
+            },
+            {
+                "title": "Analytika",
+                "desc": "Průzkum trhu, konkurence a cílového publika. Příprava zadání."
+            },
+            {
+                "title": "Design",
+                "desc": "Vytváření prototypů a UI designu. Schvalování každé obrazovky."
+            },
+            {
+                "title": "Vývoj",
+                "desc": "Psaní čistého kódu, provádění code review a testování."
+            },
+            {
+                "title": "Spuštění",
+                "desc": "Nasazení projektu, nastavení analytiky a monitoringu."
+            },
+            {
+                "title": "Podpora",
+                "desc": "Rozvoj produktu, přidávání nových funkcí a optimalizace."
+            }
+        ]
+    },
+    "testimonials": {
+        "tag": "Recenze",
+        "title": "Co říkají klienti",
+        "trust": "Důvěřují nám",
+        "items": [
+            {
+                "quote": "Tým předčil všechna naše očekávání. Projekt byl dokončen včas a výsledek předčil naše KPI o 200%.",
+                "author": "Azizbek Rahimov",
+                "role": "CEO, KAY-KAY"
+            },
+            {
+                "quote": "Profesionální přístup ke každému detailu. Skvělá komunikace a ochota vyjít vstříc. Doporučuji!",
+                "author": "Nigora Saidova",
+                "role": "Product Manager, Amadeus"
+            },
+            {
+                "quote": "Třetí projekt s tímto týmem. Vždy kvalita, vždy včas. Spolehliví partneři pro dlouhodobou spolupráci.",
+                "author": "Shoxrux Karimov",
+                "role": "Founder, SOLOD-EXPO"
+            }
+        ]
+    },
+    "cta": {
+        "title": "Jste připraveni probrat ",
+        "titleSpan": "váš projekt",
+        "subtitle": "Řekněte nám o svém nápadu a mi navrhneme optimální řešení",
+        "name": "Jméno",
+        "namePlaceholder": "Vaše jméno",
+        "emailPlaceholder": "email@example.com",
+        "message": "Zpráva",
+        "messagePlaceholder": "Řekněte nám o svém projektu...",
+        "response": "Obvykle odpovídáme do 24 hodin",
+        "submit": "Odeslat",
+        "toastTitle": "Žádost odeslána!",
+        "toastDesc": "Brzy vás budeme kontaktovat."
+    },
+    "itpark": {
+        "tag": "Rezident",
+        "title": "Rezident IT Park Uzbekistan",
+        "desc": "In Time je oficiálním rezidentem technologického parku softwarových produktů a informačních technologií (IT Park). To potvrzuje náš status spolehlivého IT partnera, který splňuje mezinárodní standardy kvality a transparentnosti podnikání.",
+        "button": "Zobrazit certifikát",
+        "status": "Oficiální status",
+        "quality": "Standardy kvality",
+        "clickToEnlarge": "Kliknutím zvětšíte",
+        "verified": "Ověřeno",
+        "residentYear": "Rezident 2025"
+    },
+    "footer": {
+        "desc": "Vytváříme digitální produkty, které pomáhají firmám růst",
+        "services": "Služby",
+        "company": "Firma",
+        "social": "Sociální sítě",
+        "copy": "© 2024 In Time. Všechna práva vyhrazena.",
+        "privacy": "Zásady ochrany osobních údajů",
+        "terms": "Podmínky použití"
+    }
+}
