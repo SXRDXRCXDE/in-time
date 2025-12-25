@@ -155,7 +155,7 @@ export const CtaSection = () => {
                     onClick={() => handleOptionSelect('serviceType', key)}
                   >
                     <div className={cn(
-                      "p-3 rounded-xl max-[480px]:mr-2 mr-4 transition-colors duration-300",
+                      "p-3 rounded-xl mr-4 transition-colors duration-300",
                       formData.serviceType === key ? "bg-white/20" : "bg-secondary group-hover:bg-primary/10"
                     )}>
                       <Icon className="w-6 h-6" />
