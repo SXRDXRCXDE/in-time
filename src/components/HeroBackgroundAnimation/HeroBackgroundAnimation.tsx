@@ -1,18 +1,20 @@
 import React, { useEffect, useRef } from 'react';
 import p5 from 'p5';
 import { useTheme } from '../theme-provider';
+import { useIsMobile } from '../../hooks/use-mobile';
 
 const HeroBackgroundAnimation: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const { theme } = useTheme();
+    const isMobile = useIsMobile();
 
     useEffect(() => {
         if (!containerRef.current) return;
 
         const sketch = (p: p5) => {
             let particles: Particle[] = [];
-            const numParticles = 80;
-            const maxDistance = 150;
+            const numParticles = isMobile ? 30 : 80;
+            const maxDistance = isMobile ? 100 : 150;
             const isDark = theme === "dark";
 
             class Particle {
@@ -29,13 +31,16 @@ const HeroBackgroundAnimation: React.FC = () => {
                 update() {
                     this.pos.add(this.vel);
 
-                    let mouse = p.createVector(p.mouseX, p.mouseY);
-                    let d = p.dist(this.pos.x, this.pos.y, mouse.x, mouse.y);
+                    // Only apply mouse repulsion on non-mobile devices
+                    if (!isMobile) {
+                        let mouse = p.createVector(p.mouseX, p.mouseY);
+                        let d = p.dist(this.pos.x, this.pos.y, mouse.x, mouse.y);
 
-                    if (d < 100) {
-                        let force = p5.Vector.sub(this.pos, mouse);
-                        force.setMag(0.5);
-                        this.pos.add(force);
+                        if (d < 100) {
+                            let force = p5.Vector.sub(this.pos, mouse);
+                            force.setMag(0.5);
+                            this.pos.add(force);
+                        }
                     }
 
                     if (this.pos.x < 0 || this.pos.x > p.width) this.vel.x *= -1;
@@ -51,6 +56,9 @@ const HeroBackgroundAnimation: React.FC = () => {
 
             p.setup = () => {
                 p.createCanvas(p.windowWidth, p.windowHeight);
+                if (isMobile) {
+                    p.pixelDensity(1);
+                }
                 for (let i = 0; i < numParticles; i++) {
                     particles.push(new Particle());
                 }
@@ -59,17 +67,20 @@ const HeroBackgroundAnimation: React.FC = () => {
             p.draw = () => {
                 p.clear(0, 0, 0, 0); // Transparent background
 
-                let mousePos = p.createVector(p.mouseX, p.mouseY);
                 let colorVal = isDark ? 255 : 0;
+                let mousePos = p.createVector(p.mouseX, p.mouseY);
 
                 for (let i = 0; i < particles.length; i++) {
                     particles[i].update();
                     particles[i].display();
 
-                    let dMouse = p.dist(mousePos.x, mousePos.y, particles[i].pos.x, particles[i].pos.y);
-                    if (dMouse < maxDistance + 50) {
-                        p.stroke(colorVal, p.map(dMouse, 0, maxDistance + 50, 80, 0));
-                        p.line(mousePos.x, mousePos.y, particles[i].pos.x, particles[i].pos.y);
+                    // Only draw lines to mouse on non-mobile devices
+                    if (!isMobile) {
+                        let dMouse = p.dist(mousePos.x, mousePos.y, particles[i].pos.x, particles[i].pos.y);
+                        if (dMouse < maxDistance + 50) {
+                            p.stroke(colorVal, p.map(dMouse, 0, maxDistance + 50, 80, 0));
+                            p.line(mousePos.x, mousePos.y, particles[i].pos.x, particles[i].pos.y);
+                        }
                     }
 
                     for (let j = i + 1; j < particles.length; j++) {
@@ -80,16 +91,19 @@ const HeroBackgroundAnimation: React.FC = () => {
                             p.strokeWeight(1);
                             p.line(particles[i].pos.x, particles[i].pos.y, particles[j].pos.x, particles[j].pos.y);
 
-                            for (let k = j + 1; k < particles.length; k++) {
-                                let d2 = p.dist(particles[j].pos.x, particles[j].pos.y, particles[k].pos.x, particles[k].pos.y);
-                                if (d2 < maxDistance - 30) {
-                                    p.noStroke();
-                                    p.fill(colorVal, alpha * 0.1);
-                                    p.triangle(
-                                        particles[i].pos.x, particles[i].pos.y,
-                                        particles[j].pos.x, particles[j].pos.y,
-                                        particles[k].pos.x, particles[k].pos.y
-                                    );
+                            // Reduced complexity for triangles on mobile
+                            if (!isMobile) {
+                                for (let k = j + 1; k < particles.length; k++) {
+                                    let d2 = p.dist(particles[j].pos.x, particles[j].pos.y, particles[k].pos.x, particles[k].pos.y);
+                                    if (d2 < maxDistance - 30) {
+                                        p.noStroke();
+                                        p.fill(colorVal, alpha * 0.1);
+                                        p.triangle(
+                                            particles[i].pos.x, particles[i].pos.y,
+                                            particles[j].pos.x, particles[j].pos.y,
+                                            particles[k].pos.x, particles[k].pos.y
+                                        );
+                                    }
                                 }
                             }
                         }
@@ -107,7 +121,7 @@ const HeroBackgroundAnimation: React.FC = () => {
         return () => {
             p5Instance.remove();
         };
-    }, [theme]);
+    }, [theme, isMobile]);
 
     return <div ref={containerRef} className="fixed inset-0 pointer-events-none z-[-1] opacity-40" />;
 };
