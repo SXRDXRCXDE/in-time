@@ -250,7 +250,9 @@
         "quality": "Quality Standards",
         "clickToEnlarge": "Click to enlarge",
         "verified": "Verified",
-        "residentYear": "Resident 2025"
+        "residentYear": "Resident 2025",
+        "visitWebsite": "Visit Website",
+        "websiteDesc": "Learn more about IT Park and the Outsourcing program in Uzbekistan."
     },
     "footer": {
         "desc": "We create digital products that help businesses grow",

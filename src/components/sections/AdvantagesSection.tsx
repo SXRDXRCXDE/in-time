@@ -65,7 +65,7 @@ export const AdvantagesSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 p-8 rounded-2xl bg-card border border-border"
+          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 p-8 rounded-2xl bg-card/40 backdrop-blur-md border border-border"
         >
           {stats.map((stat, index) => (
             <div key={index} className="text-center">

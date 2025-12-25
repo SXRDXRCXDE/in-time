@@ -325,7 +325,7 @@ export const CtaSection = () => {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ type: "spring", stiffness: 200, damping: 20 }}
-              className="bg-card rounded-[2.5rem] p-12 md:p-16 border border-border"
+              className="bg-card/40 backdrop-blur-md rounded-[2.5rem] p-12 md:p-16 border border-border"
             >
               <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-8">
                 <CheckCircle2 className="w-10 h-10 text-primary" />
@@ -375,7 +375,7 @@ export const CtaSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="bg-card rounded-[2.5rem] p-8 md:p-16 border border-border relative min-h-[600px] flex flex-col shadow-2xl shadow-primary/5"
+            className="bg-card/40 backdrop-blur-md rounded-[2.5rem] p-8 md:p-16 border border-border relative min-h-[600px] flex flex-col shadow-2xl shadow-primary/5"
           >
             {/* Progress Bar */}
             <div className="w-full h-1.5 absolute top-0 left-0 overflow-hidden px-10">

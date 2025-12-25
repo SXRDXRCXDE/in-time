@@ -19,7 +19,7 @@ export const CasesSection = () => {
   const cases = t('cases.items', { returnObjects: true }) as Array<{ title: string, cat: string, res: string }>;
 
   return (
-    <section id="cases" className="section-padding bg-card/30" ref={ref}>
+    <section id="cases" className="section-padding" ref={ref}>
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

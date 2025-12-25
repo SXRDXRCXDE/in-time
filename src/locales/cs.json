@@ -242,7 +242,9 @@
         "quality": "Standardy kvality",
         "clickToEnlarge": "Kliknutím zvětšíte",
         "verified": "Ověřeno",
-        "residentYear": "Rezident 2025"
+        "residentYear": "Rezident 2025",
+        "visitWebsite": "Navštívit web",
+        "websiteDesc": "Dozvědět se více o IT Parku a programu Outsourcing v Uzbekistánu."
     },
     "footer": {
         "desc": "Vytváříme digitální produkty, které pomáhají firmám růst",

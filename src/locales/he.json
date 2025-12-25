@@ -242,7 +242,9 @@
         "quality": "תקני איכות",
         "clickToEnlarge": "לחץ להגדלה",
         "verified": "מאושר",
-        "residentYear": "תושב 2025"
+        "residentYear": "תושב 2025",
+        "visitWebsite": "בקר באתר",
+        "websiteDesc": "למד עוד על IT Park ותוכנית ה-Outsourcing באוזבקיסטן."
     },
     "footer": {
         "desc": "אנחנו יוצרים מוצרים דיגיטליים שעוזרים לעסקים לצמוח",

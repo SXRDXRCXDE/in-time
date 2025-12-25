@@ -55,7 +55,7 @@ export const TestimonialsSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative"
         >
-          <div className="bg-card rounded-3xl p-8 md:p-12 lg:p-16 border border-border">
+          <div className="bg-card/40 backdrop-blur-md rounded-3xl p-8 md:p-12 lg:p-16 border border-border">
             <Quote className="w-12 h-12 text-foreground/10 mb-8" />
 
             <div className="relative min-h-[200px]">

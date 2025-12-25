@@ -109,7 +109,7 @@ const HeroBackgroundAnimation: React.FC = () => {
         };
     }, [theme]);
 
-    return <div ref={containerRef} className="w-full h-full opacity-40" />;
+    return <div ref={containerRef} className="fixed inset-0 pointer-events-none z-[-1] opacity-40" />;
 };
 
 export default HeroBackgroundAnimation;

@@ -10,7 +10,7 @@ export const ProcessSection = () => {
   const steps = t('process.steps', { returnObjects: true }) as Array<{ title: string, desc: string }>;
 
   return (
-    <section id="process" className="section-padding bg-card/30" ref={ref}>
+    <section id="process" className="section-padding" ref={ref}>
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -77,48 +77,57 @@ export const ITParkSection = () => {
                         {/* Decorative background elements */}
                         <div className="absolute -inset-4 bg-gradient-to-tr from-primary/10 to-transparent rounded-[2.5rem] blur-2xl -z-10" />
 
-                        <Dialog>
-                            <DialogTrigger asChild>
-                                <div className="relative cursor-pointer group rounded-2xl overflow-hidden border border-border shadow-2xl">
-                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 z-10" />
-                                    <motion.div
-                                        whileHover={{ scale: 1.02 }}
-                                        transition={{ duration: 0.4 }}
-                                    >
+                        <div className="relative group rounded-3xl overflow-hidden border border-border shadow-2xl bg-card/40 backdrop-blur-md p-8 md:p-12 flex flex-col items-center text-center">
+                            <motion.div
+                                className="w-32 h-32 md:w-40 md:h-40 bg-white rounded-2xl p-6 shadow-sm mb-8 flex items-center justify-center border border-border/50"
+                                whileHover={{ scale: 1.05, rotate: 2 }}
+                                transition={{ type: "spring", stiffness: 300 }}
+                            >
+                                <img src={itParkLogo} alt="IT Park Logo" className="w-full h-auto" />
+                            </motion.div>
+
+                            <h3 className="text-2xl font-medium mb-4">{t('itpark.title')}</h3>
+                            <p className="text-muted-foreground mb-8 max-w-sm leading-relaxed">
+                                {t('itpark.websiteDesc')}
+                            </p>
+
+                            <div className="flex flex-col gap-4 w-full max-w-xs">
+                                <Button asChild className="rounded-full h-12 text-base font-medium">
+                                    <a href="https://outsource.gov.uz/en" target="_blank" rel="noopener noreferrer">
+                                        {t('itpark.visitWebsite')}
+                                        <ExternalLink className="ml-2 w-4 h-4" />
+                                    </a>
+                                </Button>
+
+                                <Dialog>
+                                    <DialogTrigger asChild>
+                                        <Button variant="outline" className="rounded-full h-12 text-base font-medium">
+                                            {t('itpark.button')}
+                                        </Button>
+                                    </DialogTrigger>
+                                    <DialogContent className="max-w-4xl p-0 overflow-hidden bg-transparent border-none">
                                         <img
                                             src="/it-park-certificate.png"
-                                            alt="IT Park Certificate Preview"
-                                            className="w-full h-auto object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
+                                            alt="IT Park Certificate"
+                                            className="w-full h-auto rounded-lg shadow-2xl"
                                         />
-                                    </motion.div>
-                                    <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 z-20">
-                                        <p className="text-white text-sm font-medium text-center">{t('itpark.clickToEnlarge')}</p>
-                                    </div>
-                                </div>
-                            </DialogTrigger>
-                            <DialogContent className="max-w-4xl p-0 overflow-hidden bg-transparent border-none">
-                                <img
-                                    src="/it-park-certificate.png"
-                                    alt="IT Park Certificate"
-                                    className="w-full h-auto rounded-lg shadow-2xl"
-                                />
-                            </DialogContent>
-                        </Dialog>
+                                    </DialogContent>
+                                </Dialog>
+                            </div>
+                        </div>
 
                         {/* Float badge */}
                         <motion.div
                             animate={{ y: [0, -10, 0] }}
                             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute -top-6 -right-6 md:top-10 md:-right-10 bg-card border border-border p-4 rounded-2xl shadow-xl z-30"
+                            className="absolute -top-6 -right-6 md:top-10 md:-right-10 bg-card/40 backdrop-blur-md border border-border p-4 rounded-2xl shadow-xl z-30 flex items-center gap-3"
                         >
-                            <div className="flex items-center gap-3">
-                                <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
-                                    <img src={itParkLogo} alt="IT Park Logo" className="w-8 h-auto" />
-                                </div>
-                                <div>
-                                    <p className="text-[10px] text-muted-foreground uppercase tracking-widest font-semibold">{t('itpark.verified')}</p>
-                                    <p className="text-sm font-bold">{t('itpark.residentYear')}</p>
-                                </div>
+                            <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                                <ShieldCheck className="w-5 h-5" />
+                            </div>
+                            <div>
+                                <p className="text-[10px] text-muted-foreground uppercase tracking-widest font-semibold">{t('itpark.verified')}</p>
+                                <p className="text-sm font-bold">{t('itpark.residentYear')}</p>
                             </div>
                         </motion.div>
                     </motion.div>

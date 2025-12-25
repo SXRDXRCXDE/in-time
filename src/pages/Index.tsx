@@ -9,10 +9,13 @@ import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ITParkSection } from "@/components/sections/ITParkSection";
 import { CtaSection } from "@/components/sections/CtaSection";
 
+import HeroBackgroundAnimation from "@/components/HeroBackgroundAnimation/HeroBackgroundAnimation";
+
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen  text-foreground">
       <Header />
+      <HeroBackgroundAnimation />
       <main>
         <HeroSection />
         <ServicesSection />

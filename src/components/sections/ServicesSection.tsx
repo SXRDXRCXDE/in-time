@@ -67,7 +67,7 @@ export const ServicesSection = () => {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="group p-8 rounded-2xl bg-card border border-border hover:border-foreground/20 transition-all duration-500 card-shine hover-lift cursor-pointer"
+                className="group p-8 rounded-2xl bg-card/40 backdrop-blur-md border border-border hover:border-foreground/20 transition-all duration-500 card-shine hover-lift cursor-pointer"
               >
                 <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-foreground/5 transition-colors duration-500">
                   <Icon className="w-7 h-7 text-foreground" />

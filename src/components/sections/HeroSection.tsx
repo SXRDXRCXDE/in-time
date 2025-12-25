@@ -23,15 +23,10 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* P5 Background Animation */}
-      <div className="absolute inset-0 z-0">
-        <HeroBackgroundAnimation />
-      </div>
-
       {/* Subtle Gradient Background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 right-0 h-[50vh] bg-gradient-to-b from-muted/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-[30vh] bg-gradient-to-t from-muted/10 to-transparent" />
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-0 right-0 h-[50vh] bg-gradient-to-b from-background/50 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-[30vh] bg-gradient-to-t from-background/30 to-transparent" />
       </div>
 
       {/* Animated Glow Orb */}
