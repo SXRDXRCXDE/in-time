@@ -151,11 +151,11 @@ export const CtaSection = () => {
                     type="button"
                     variant={formData.serviceType === key ? "hero" : "heroOutline"}
                     size="xl"
-                    className="justify-start text-left h-auto py-6 px-8 rounded-2xl group transition-all duration-300"
+                    className="justify-start text-left h-auto max-[480px]:px-4 max-[480px]:py-3 py-6 px-8 rounded-2xl group transition-all duration-300 overflow-hidden"
                     onClick={() => handleOptionSelect('serviceType', key)}
                   >
                     <div className={cn(
-                      "p-3 rounded-xl mr-4 transition-colors duration-300",
+                      "p-3 rounded-xl max-[480px]:mr-2 mr-4 transition-colors duration-300",
                       formData.serviceType === key ? "bg-white/20" : "bg-secondary group-hover:bg-primary/10"
                     )}>
                       <Icon className="w-6 h-6" />
@@ -180,7 +180,7 @@ export const CtaSection = () => {
                     type="button"
                     variant={formData.projectGoal === key ? "hero" : "heroOutline"}
                     size="xl"
-                    className="justify-start text-left h-auto py-6 px-8 rounded-2xl group transition-all duration-300"
+                    className="justify-start text-left h-auto max-[480px]:px-4 max-[480px]:py-3 py-6 px-8 rounded-2xl group transition-all duration-300 overflow-hidden"
                     onClick={() => handleOptionSelect('projectGoal', key)}
                   >
                     <div className={cn(
@@ -209,7 +209,7 @@ export const CtaSection = () => {
                     type="button"
                     variant={formData.scale === key ? "hero" : "heroOutline"}
                     size="xl"
-                    className="justify-start text-left h-auto py-6 px-8 rounded-2xl group transition-all duration-300"
+                    className="justify-start text-left h-auto max-[480px]:px-4 max-[480px]:py-3 py-6 px-8 rounded-2xl group transition-all duration-300 overflow-hidden"
                     onClick={() => handleOptionSelect('scale', key)}
                   >
                     <div className={cn(
@@ -236,7 +236,7 @@ export const CtaSection = () => {
                   type="button"
                   variant={formData.budget === key ? "hero" : "heroOutline"}
                   size="xl"
-                  className="justify-start text-left h-auto py-6 px-8 rounded-2xl group transition-all duration-300"
+                  className="justify-start text-left h-auto max-[480px]:px-4 max-[480px]:py-3 py-6 px-8 rounded-2xl group transition-all duration-300 overflow-hidden"
                   onClick={() => handleOptionSelect('budget', key)}
                 >
                   <div className={cn(
@@ -262,7 +262,7 @@ export const CtaSection = () => {
                   type="button"
                   variant={formData.timeline === key ? "hero" : "heroOutline"}
                   size="xl"
-                  className="justify-start text-left h-auto py-6 px-8 rounded-2xl group transition-all duration-300"
+                  className="justify-start text-left h-auto max-[480px]:px-4 max-[480px]:py-3 py-6 px-8 rounded-2xl group transition-all duration-300 overflow-hidden"
                   onClick={() => handleOptionSelect('timeline', key)}
                 >
                   <div className={cn(
