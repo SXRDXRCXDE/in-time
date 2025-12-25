@@ -9,15 +9,9 @@
     },
     "hero": {
         "studio": "Digital development studio",
-        "title1": "Helping companies grow,",
-        "title2": "creating ",
-        "title3": "next level",
-        "words": [
-            "websites",
-            "apps",
-            "bots",
-            "automation"
-        ],
+        "title1": "Integrated",
+        "title2": "digital solutions",
+        "title3": "for your business",
         "description": "We develop digital products that help businesses grow and stand out from competitors",
         "ctaPrimary": "Discuss project",
         "ctaSecondary": "View cases"

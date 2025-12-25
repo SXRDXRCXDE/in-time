@@ -9,18 +9,6 @@ import HeroBackgroundAnimation from "../HeroBackgroundAnimation/HeroBackgroundAn
 
 export const HeroSection = () => {
   const { t, i18n } = useTranslation();
-  const [currentWord, setCurrentWord] = useState(0);
-
-  // Use words from translation or fallback
-  const translatedWords = t('hero.words', { returnObjects: true }) as string[] || ["сайты", "приложения", "боты", "автоматизацию"];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentWord((prev) => (prev + 1) % translatedWords.length);
-    }, 2500);
-    return () => clearInterval(interval);
-  }, [translatedWords.length]);
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Subtle Gradient Background */}
@@ -106,24 +94,8 @@ export const HeroSection = () => {
               className="block"
               dir={i18n.language === 'he' ? 'rtl' : 'ltr'}
             >
-              {t('hero.title2')}
-              <span className="relative inline-block min-w-[200px] md:min-w-[300px]">
-                <motion.span
-                  key={currentWord}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.4 }}
-                  className="text-foreground font-medium"
-                >
-                  {translatedWords[currentWord]}
-                </motion.span>
-                <motion.span
-                  className="absolute -bottom-2 left-0 h-px bg-foreground/50"
-                  initial={{ width: 0 }}
-                  animate={{ width: "100%" }}
-                  transition={{ duration: 0.6, delay: 0.8 }}
-                />
+              <span className="text-foreground font-medium">
+                {t('hero.title2')}
               </span>
             </motion.span>
             <motion.span
