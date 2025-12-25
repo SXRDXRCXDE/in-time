@@ -171,13 +171,65 @@
         "title": "Jste připraveni probrat ",
         "titleSpan": "váš projekt",
         "subtitle": "Řekněte nám o svém nápadu a mi navrhneme optimální řešení",
-        "name": "Jméno",
-        "namePlaceholder": "Vaše jméno",
-        "emailPlaceholder": "email@example.com",
-        "message": "Zpráva",
-        "messagePlaceholder": "Řekněte nám o svém projektu...",
-        "response": "Obvykle odpovídáme do 24 hodin",
+        "steps": {
+            "step1": {
+                "question": "Co chcete udělat?",
+                "options": {
+                    "site": "Web",
+                    "app": "Aplikace",
+                    "bot": "Bot",
+                    "automation": "Automatizace",
+                    "notSure": "Nejsem si jist / potřebuji konzultaci"
+                }
+            },
+            "step2": {
+                "question": "Proč projekt?",
+                "options": {
+                    "mvp": "MVP",
+                    "sales": "Prodej",
+                    "internal": "Vnitřní nástroj",
+                    "support": "Zákaznická podpora",
+                    "scaling": "Škálování"
+                }
+            },
+            "step3": {
+                "question": "Odhadovaný rozsah",
+                "options": {
+                    "simple": "Jednoduchý (landing / základní bot)",
+                    "medium": "Střední",
+                    "complex": "Složitý / vlastní"
+                }
+            },
+            "step4": {
+                "question": "Rozpočet",
+                "options": {
+                    "under500": "do €500",
+                    "500-1000": "€500-1000",
+                    "1000-3000": "€1,000–3,000",
+                    "3000-7000": "€3,000–7,000",
+                    "dontKnow": "zatím nevím"
+                }
+            },
+            "step5": {
+                "question": "Termín",
+                "options": {
+                    "urgent": "urgentní",
+                    "1-2months": "1–2 měsíce",
+                    "noDeadline": "žádný přísný termín"
+                }
+            },
+            "step6": {
+                "question": "Kontakt",
+                "name": "Jméno",
+                "namePlaceholder": "Vaše jméno",
+                "contact": "Email / Telegram",
+                "contactPlaceholder": "@uživatel nebo email"
+            }
+        },
+        "next": "Další",
+        "back": "Zpět",
         "submit": "Odeslat",
+        "response": "Obvykle odpovídáme do 24 hodin",
         "toastTitle": "Žádost odeslána!",
         "toastDesc": "Brzy vás budeme kontaktovat."
     },
@@ -200,5 +252,9 @@
         "copy": "© 2024 In Time. Všechna práva vyhrazena.",
         "privacy": "Zásady ochrany osobních údajů",
         "terms": "Podmínky použití"
+    },
+    "common": {
+        "step": "Krok",
+        "done": "Hotovo"
     }
 }

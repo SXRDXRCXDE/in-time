@@ -171,13 +171,65 @@
         "title": "מוכנים לדבר על ",
         "titleSpan": "הפרויקט שלכם",
         "subtitle": "ספרו לנו על הרעיון שלכם, ואנחנו נציע את הפתרון האופטימלי",
-        "name": "שם",
-        "namePlaceholder": "שם",
-        "emailPlaceholder": "email@example.com",
-        "message": "הודעה",
-        "messagePlaceholder": "ספרו לנו על הפרויקט שלכם...",
-        "response": "בדרך כלל עונים תוך 24 שעות",
+        "steps": {
+            "step1": {
+                "question": "מה ברצונך לעשות?",
+                "options": {
+                    "site": "אתר",
+                    "app": "אפליקציה",
+                    "bot": "בוט",
+                    "automation": "אוטומציה",
+                    "notSure": "לא בטוח / צריך ייעוץ"
+                }
+            },
+            "step2": {
+                "question": "לשם מה הפרויקט?",
+                "options": {
+                    "mvp": "MVP",
+                    "sales": "מכירות",
+                    "internal": "כלי פנימי",
+                    "support": "תמיכת לקוחות",
+                    "scaling": "צמיחה"
+                }
+            },
+            "step3": {
+                "question": "היקף משוער",
+                "options": {
+                    "simple": "פשוט (דף נחיתה / בוט בסיסי)",
+                    "medium": "בינוני",
+                    "complex": "מורכב / מותאם אישית"
+                }
+            },
+            "step4": {
+                "question": "תקציב",
+                "options": {
+                    "under500": "עד €500",
+                    "500-1000": "€500-1000",
+                    "1000-3000": "€1,000–3,000",
+                    "3000-7000": "€3,000–7,000",
+                    "dontKnow": "עדיין לא יודע"
+                }
+            },
+            "step5": {
+                "question": "לוח זמנים",
+                "options": {
+                    "urgent": "דחוף",
+                    "1-2months": "1–2 חודשים",
+                    "noDeadline": "אין דדליין קשיח"
+                }
+            },
+            "step6": {
+                "question": "קשר",
+                "name": "שם",
+                "namePlaceholder": "השם שלך",
+                "contact": "אימייל / טלגרם",
+                "contactPlaceholder": "שם משתמש או אימייל"
+            }
+        },
+        "next": "הבא",
+        "back": "חזור",
         "submit": "שלח",
+        "response": "בדרך כלל עונים תוך 24 שעות",
         "toastTitle": "הבקשה נשלחה!",
         "toastDesc": "ניצור איתך קשר בהקדם."
     },
@@ -200,5 +252,9 @@
         "copy": "© 2024 In Time. כל הזכויות שמורות.",
         "privacy": "מדיניות פרטיות",
         "terms": "תנאי שימוש"
+    },
+    "common": {
+        "step": "שלב",
+        "done": "בוצע"
     }
 }

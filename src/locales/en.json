@@ -179,13 +179,65 @@
         "title": "Ready to discuss ",
         "titleSpan": "your project",
         "subtitle": "Tell us about your idea, and we will propose the optimal solution",
-        "name": "Name",
-        "namePlaceholder": "Your name",
-        "emailPlaceholder": "email@example.com",
-        "message": "Message",
-        "messagePlaceholder": "Tell us about your project...",
-        "response": "Usually respond within 24 hours",
+        "steps": {
+            "step1": {
+                "question": "What of you want to do?",
+                "options": {
+                    "site": "Website",
+                    "app": "App",
+                    "bot": "Bot",
+                    "automation": "Automation",
+                    "notSure": "Not sure / need consultation"
+                }
+            },
+            "step2": {
+                "question": "What is the project for?",
+                "options": {
+                    "mvp": "MVP",
+                    "sales": "Sales",
+                    "internal": "Internal tool",
+                    "support": "Customer support",
+                    "scaling": "Scaling"
+                }
+            },
+            "step3": {
+                "question": "Approximate scale",
+                "options": {
+                    "simple": "Simple (landing / basic bot)",
+                    "medium": "Medium",
+                    "complex": "Complex / custom"
+                }
+            },
+            "step4": {
+                "question": "Budget",
+                "options": {
+                    "under500": "up to €500",
+                    "500-1000": "€500-1000",
+                    "1000-3000": "€1,000–3,000",
+                    "3000-7000": "€3,000–7,000",
+                    "dontKnow": "don't know yet"
+                }
+            },
+            "step5": {
+                "question": "Timeline",
+                "options": {
+                    "urgent": "urgent",
+                    "1-2months": "1–2 months",
+                    "noDeadline": "no strict deadline"
+                }
+            },
+            "step6": {
+                "question": "Contact",
+                "name": "Name",
+                "namePlaceholder": "Your name",
+                "contact": "Email / Telegram",
+                "contactPlaceholder": "@username or email"
+            }
+        },
+        "next": "Next",
+        "back": "Back",
         "submit": "Send",
+        "response": "Usually respond within 24 hours",
         "toastTitle": "Request sent!",
         "toastDesc": "We will contact you shortly."
     },
@@ -208,5 +260,9 @@
         "copy": "© 2024 In Time. All rights reserved.",
         "privacy": "Privacy Policy",
         "terms": "Terms of Use"
+    },
+    "common": {
+        "step": "Step",
+        "done": "Done"
     }
 }
