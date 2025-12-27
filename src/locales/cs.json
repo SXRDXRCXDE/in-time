@@ -13,7 +13,7 @@
         "title2": "digitální řešení",
         "title3": "pro vaše podnikání",
         "description": "Navrhujeme a implementujeme automatizované systémy: web, aplikaci a bota — jako jednotný nástroj pro prodej a správu",
-        "ctaPrimary": "Probrat projekt",
+        "ctaPrimary": "Spočítat cenu online",
         "ctaSecondary": "Zobrazit projekty"
     },
     "services": {
@@ -31,18 +31,6 @@
             {
                 "title": "Chatboti",
                 "desc": "Chytří boti pro Telegram, WhatsApp a další platformy pro automatizaci komunikace"
-            },
-            {
-                "title": "Automatizace",
-                "desc": "Integrace, API a automatizace obchodních procesů pro zvýšení efektivity"
-            },
-            {
-                "title": "UI/UX Design",
-                "desc": "Navrhování uživatelské zkušenosti a vytváření vizuálních řešení"
-            },
-            {
-                "title": "Backend",
-                "desc": "Vývoj serverové části, databází a cloudové infrastruktury"
             }
         ]
     },
@@ -213,13 +201,26 @@
                 }
             },
             "step6": {
-                "question": "Kontakt",
+                "question": "Kontaktní údaje",
                 "name": "Jméno",
                 "namePlaceholder": "Vaše jméno",
-                "contact": "Email / Telegram",
-                "contactPlaceholder": "@uživatel nebo email"
+                "email": "Email",
+                "emailPlaceholder": "example@mail.com",
+                "ctaTitle": "Zanechte kontakt — upřesníme detaily a navrhneme optimální variantu realizace."
             }
         },
+        "result": {
+            "title": "Výsledek výpočtu",
+            "estimation": "Odhad projektu",
+            "timeline": "Termín realizace",
+            "weeks": "týdnů",
+            "weeksRange": "{{min}}–{{max}} {{unit}}",
+            "priceRange": "{{min}} – {{max}} €",
+            "disclaimer": "Jedná se o orientační odhad. Finální cena závisí na detailech projektu.",
+            "toContact": "Další",
+            "liveEstimate": "Živý odhad"
+        },
+        "calculating": "Analyzujeme parametry...",
         "next": "Další",
         "back": "Zpět",
         "submit": "Odeslat",

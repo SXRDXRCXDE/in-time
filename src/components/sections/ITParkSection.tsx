@@ -83,7 +83,7 @@ export const ITParkSection = () => {
                                 whileHover={{ scale: 1.05, rotate: 2 }}
                                 transition={{ type: "spring", stiffness: 300 }}
                             >
-                                <img src={itParkLogo} alt="IT Park Logo" className="w-full h-auto" />
+                                <img src={itParkLogo} alt="IT Park Logo" className="w-full h-auto grayscale contrast-125" />
                             </motion.div>
 
                             <h3 className="text-2xl font-medium mb-4">{t('itpark.title')}</h3>

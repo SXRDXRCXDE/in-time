@@ -13,7 +13,7 @@
         "title2": "digital solutions",
         "title3": "for your business",
         "description": "We develop digital products that help businesses grow and stand out from competitors",
-        "ctaPrimary": "Discuss project",
+        "ctaPrimary": "Calculate price online",
         "ctaSecondary": "View cases"
     },
     "services": {
@@ -31,18 +31,6 @@
             {
                 "title": "Chatbots",
                 "desc": "Smart bots for Telegram, WhatsApp and other platforms for communication automation"
-            },
-            {
-                "title": "Automation",
-                "desc": "Integrations, APIs and business process automation to increase efficiency"
-            },
-            {
-                "title": "UI/UX Design",
-                "desc": "User experience design and creation of visual solutions"
-            },
-            {
-                "title": "Backend",
-                "desc": "Development of server side, databases and cloud infrastructure"
             }
         ]
     },
@@ -224,10 +212,23 @@
                 "question": "Contact",
                 "name": "Name",
                 "namePlaceholder": "Your name",
-                "contact": "Email / Telegram",
-                "contactPlaceholder": "@username or email"
+                "email": "Email",
+                "emailPlaceholder": "example@mail.com",
+                "ctaTitle": "Leave your contact — we will clarify details and suggest the optimal implementation option."
             }
         },
+        "result": {
+            "title": "Calculation Result",
+            "estimation": "Project estimation",
+            "timeline": "Implementation timeline",
+            "weeks": "weeks",
+            "weeksRange": "{{min}}–{{max}} {{unit}}",
+            "priceRange": "{{min}} – {{max}} €",
+            "disclaimer": "This is a rough estimate. The final cost depends on project details.",
+            "toContact": "Next",
+            "liveEstimate": "Live Estimate"
+        },
+        "calculating": "Analyzing parameters...",
         "next": "Next",
         "back": "Back",
         "submit": "Send",

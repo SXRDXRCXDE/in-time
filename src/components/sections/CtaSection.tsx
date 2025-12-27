@@ -1,5 +1,5 @@
 import { motion, AnimatePresence, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import {
@@ -21,7 +21,9 @@ import {
   Layers,
   Zap,
   Clock,
-  Euro
+  Euro,
+  Calculator,
+  Timer
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
@@ -51,7 +53,7 @@ const stepIcons: Record<string, any> = {
 };
 
 export const CtaSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { toast } = useToast();
@@ -66,15 +68,107 @@ export const CtaSection = () => {
     budget: "",
     timeline: "",
     name: "",
-    contact: "",
+    email: "",
   });
 
-  const totalSteps = 6;
+  const [isCalculating, setIsCalculating] = useState(false);
+
+  const NumberCounter = ({ value, suffix = "" }: { value: number; suffix?: string }) => {
+    const [displayValue, setDisplayValue] = useState(0);
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+
+    useEffect(() => {
+      if (isInView) {
+        let start = 0;
+        const duration = 1.2;
+        const totalFrames = duration * 60;
+        let frame = 0;
+        const timer = setInterval(() => {
+          frame++;
+          const progress = frame / totalFrames;
+          const current = Math.round(start + (value - start) * (1 - Math.pow(1 - progress, 3)));
+          setDisplayValue(current);
+          if (frame >= totalFrames) clearInterval(timer);
+        }, 1000 / 60);
+        return () => clearInterval(timer);
+      }
+    }, [value, isInView]);
+
+    return <span ref={ref}>{displayValue.toLocaleString()}{suffix}</span>;
+  };
+
+  const totalSteps = 7;
+
+  const calculateResult = () => {
+    const serviceData: Record<string, { base: number, weeks: [number, number] }> = {
+      site: { base: 700, weeks: [1, 2] },
+      app: { base: 2000, weeks: [3, 5] },
+      bot: { base: 700, weeks: [1, 2] },
+      automation: { base: 1200, weeks: [2, 3] },
+      notSure: { base: 1000, weeks: [2, 3] },
+    };
+
+    const goalMults: Record<string, number> = {
+      mvp: 1.0,
+      sales: 1.2,
+      internal: 1.1,
+      support: 1.15,
+      scaling: 1.3,
+    };
+
+    const scaleData: Record<string, { mult: number, weekOffset: number }> = {
+      simple: { mult: 0.9, weekOffset: -1 },
+      medium: { mult: 1.0, weekOffset: 0 },
+      complex: { mult: 1.4, weekOffset: 2 },
+    };
+
+    const budgetCorrections: Record<string, number> = {
+      under500: -0.15,
+      "500-1000": -0.05,
+      "1000-3000": 0,
+      "3000-7000": 0.05,
+      dontKnow: 0,
+    };
+
+    const timelineData: Record<string, { mult: number, timeMult: number }> = {
+      urgent: { mult: 1.3, timeMult: 0.7 },
+      "1-2months": { mult: 1.0, timeMult: 1.0 },
+      noDeadline: { mult: 0.95, timeMult: 1.2 },
+    };
+
+    const service = serviceData[formData.serviceType] || serviceData.notSure;
+    const goalMult = goalMults[formData.projectGoal] || 1.0;
+    const scale = scaleData[formData.scale] || scaleData.medium;
+    const budgetCorr = budgetCorrections[formData.budget] || 0;
+    const timeline = timelineData[formData.timeline] || timelineData["1-2months"];
+
+    const marketMult = i18n.language.startsWith('he') ? 1.4 : 1.0;
+
+    const basePrice = service.base;
+    const finalPrice = basePrice * goalMult * scale.mult * timeline.mult * marketMult * (1 + budgetCorr);
+
+    // Price Range Calculation as per example 2100 - 2700 (which is roughly single value +/- 10-15%)
+    const priceMin = Math.round((finalPrice * 0.95) / 50) * 50;
+    const priceMax = Math.round((finalPrice * 1.25) / 50) * 50;
+
+    const minWeeks = Math.max(1, Math.round((service.weeks[0] + scale.weekOffset) * timeline.timeMult));
+    const maxWeeks = Math.max(minWeeks + 1, Math.round((service.weeks[1] + scale.weekOffset) * timeline.timeMult));
+
+    return { priceMin, priceMax, minWeeks, maxWeeks };
+  };
 
   const handleNext = () => {
     if (step < totalSteps) {
-      setDirection(1);
-      setStep(step + 1);
+      if (step === 5) {
+        setDirection(1);
+        setIsCalculating(true);
+        setStep(step + 1);
+        setTimeout(() => setIsCalculating(false), 1500);
+      } else {
+        setDirection(1);
+        setStep(step + 1);
+      }
     }
   };
 
@@ -89,13 +183,12 @@ export const CtaSection = () => {
     setFormData((prev) => ({ ...prev, [field]: value }));
     if (step < 6) {
       setDirection(1);
-      setTimeout(() => setStep(step + 1), 200); // Slight delay for visual feedback
+      setTimeout(() => setStep(step + 1), 200);
     }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate API call
     setTimeout(() => {
       setIsSubmitted(true);
       toast({
@@ -115,7 +208,7 @@ export const CtaSection = () => {
       budget: "",
       timeline: "",
       name: "",
-      contact: "",
+      email: "",
     });
   };
 
@@ -137,6 +230,32 @@ export const CtaSection = () => {
   };
 
   const renderStep = () => {
+    if (isCalculating) {
+      return (
+        <div className="flex flex-col items-center justify-center h-full py-12 space-y-6">
+          <div className="relative w-20 h-20">
+            <motion.div
+              className="absolute inset-0 border-4 border-primary/20 rounded-full"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+            />
+            <motion.div
+              className="absolute inset-0 border-4 border-t-primary rounded-full"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+            />
+          </div>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-xl font-medium animate-pulse"
+          >
+            {t('cta.calculating', { defaultValue: 'Анализируем параметры...' })}
+          </motion.p>
+        </div>
+      );
+    }
+
     switch (step) {
       case 1:
         return (
@@ -278,9 +397,96 @@ export const CtaSection = () => {
           </div>
         );
       case 6:
+        const results = calculateResult();
+        const currencyData = {
+          cs: { rate: 25, symbol: " Kč" },
+          he: { rate: 4, symbol: " ₪" },
+          ru: { rate: 1, symbol: " €" },
+          en: { rate: 1, symbol: " €" },
+        }[i18n.language] || { rate: 1, symbol: " €" };
+
+        const displayPriceMin = Math.round(results.priceMin * currencyData.rate);
+        const displayPriceMax = Math.round(results.priceMax * currencyData.rate);
+
         return (
           <div className="space-y-8 p-1">
-            <h3 className="text-2xl md:text-3xl font-medium mb-8">{t('cta.steps.step6.question')}</h3>
+            <div className="flex items-center justify-between mb-8">
+              <h3 className="text-2xl md:text-3xl font-medium">{t('cta.result.title')}</h3>
+              <div className="px-4 py-1.5 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase tracking-[0.2em] border border-primary/20">
+                {t('cta.result.liveEstimate', { defaultValue: 'Live Estimate' })}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="bg-secondary/40 backdrop-blur-sm rounded-[2rem] p-8 border border-primary/10 space-y-6 relative overflow-hidden group"
+              >
+                <div className="absolute -top-12 -right-12 p-8 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity pointer-events-none">
+                  <Calculator className="w-64 h-64" />
+                </div>
+
+                <div className="flex items-center gap-4 relative z-10">
+                  <div className="p-3 bg-primary/10 rounded-2xl">
+                    <Calculator className="w-8 h-8 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-1">
+                      {t('cta.result.estimation')}
+                    </p>
+                    <div className="text-3xl md:text-5xl font-semibold flex items-baseline gap-1">
+                      <span className="text-2xl mr-1">💰</span>
+                      <NumberCounter value={displayPriceMin} suffix=" – " />
+                      <NumberCounter value={displayPriceMax} suffix={currencyData.symbol} />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4 relative z-10">
+                  <div className="p-3 bg-primary/20 rounded-2xl">
+                    <Timer className="w-8 h-8 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-1">
+                      {t('cta.result.timeline')}
+                    </p>
+                    <div className="text-2xl md:text-3xl font-medium flex items-center gap-2">
+                      <span>⏱️</span>
+                      <NumberCounter value={results.minWeeks} />
+                      <span>–</span>
+                      <NumberCounter value={results.maxWeeks} suffix={` ${t('cta.result.weeks')}`} />
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+                {[
+                  { label: formData.serviceType ? t('cta.steps.step1.options.' + formData.serviceType) : '', icon: Globe },
+                  { label: formData.projectGoal ? t('cta.steps.step2.options.' + formData.projectGoal) : '', icon: Rocket },
+                  { label: formData.scale ? t('cta.steps.step3.options.' + formData.scale) : '', icon: Layers },
+                  { label: formData.timeline ? t('cta.steps.step5.options.' + formData.timeline) : '', icon: Clock }
+                ].map((item, i) => (
+                  <div key={i} className="flex flex-col items-center justify-center p-3 rounded-2xl bg-secondary/20 border border-border/50 text-center">
+                    <item.icon className="w-4 h-4 mb-2 text-primary opacity-60" />
+                    <span className="text-[10px] uppercase tracking-tighter text-muted-foreground line-clamp-1">{item.label}</span>
+                  </div>
+                ))}
+              </div>
+
+              <p className="text-muted-foreground italic px-4 text-center text-sm">
+                {t('cta.result.disclaimer')}
+              </p>
+            </div>
+          </div>
+        );
+      case 7:
+        return (
+          <div className="space-y-8 p-1">
+            <h3 className="text-2xl md:text-3xl font-medium mb-4">{t('cta.steps.step6.question')}</h3>
+            <p className="text-muted-foreground mb-8 text-lg">{t('cta.steps.step6.ctaTitle')}</p>
             <div className="grid grid-cols-1 gap-6">
               <div className="space-y-2">
                 <label className="text-sm font-medium text-muted-foreground ml-1">
@@ -297,14 +503,14 @@ export const CtaSection = () => {
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-medium text-muted-foreground ml-1">
-                  {t('cta.steps.step6.contact')}
+                  {t('cta.steps.step6.email')}
                 </label>
                 <input
-                  type="text"
+                  type="email"
                   required
-                  placeholder={t('cta.steps.step6.contactPlaceholder')}
-                  value={formData.contact}
-                  onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
+                  placeholder={t('cta.steps.step6.emailPlaceholder')}
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full bg-secondary border border-border rounded-2xl px-6 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-muted-foreground/50"
                 />
               </div>
@@ -399,7 +605,7 @@ export const CtaSection = () => {
                   <div
                     key={i}
                     className={cn(
-                      "w-8 h-1 rounded-full transition-all duration-300",
+                      "w-6 h-1 rounded-full transition-all duration-300",
                       step > i ? "bg-primary" : "bg-muted"
                     )}
                   />
@@ -448,7 +654,7 @@ export const CtaSection = () => {
                   <p className="text-muted-foreground text-sm order-2 sm:order-1 hidden md:block">
                     {t('cta.response')}
                   </p>
-                  {step < totalSteps ? (
+                  {step < totalSteps && (
                     <Button
                       type="button"
                       variant="hero"
@@ -463,16 +669,17 @@ export const CtaSection = () => {
                         (step === 5 && !formData.timeline)
                       }
                     >
-                      {t('cta.next')}
+                      {step === 6 ? t('cta.result.toContact') : t('cta.next')}
                       <ChevronRight className="ml-2 h-5 w-5" />
                     </Button>
-                  ) : (
+                  )}
+                  {step === 7 && (
                     <Button
                       type="submit"
                       variant="hero"
                       size="xl"
                       className="w-full sm:w-auto order-1 sm:order-2 rounded-xl"
-                      disabled={!formData.name || !formData.contact}
+                      disabled={!formData.name || !formData.email}
                     >
                       {t('cta.submit')}
                       <Send className="ml-2 h-5 w-5" />

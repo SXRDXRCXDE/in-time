@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Globe, Smartphone, Bot, Zap, Palette, Database } from "lucide-react";
 
-const icons = [Globe, Smartphone, Bot, Zap, Palette, Database];
+const icons = [Globe, Smartphone, Bot];
 
 const containerVariants = {
   hidden: { opacity: 0 },
