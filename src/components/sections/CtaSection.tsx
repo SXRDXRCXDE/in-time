@@ -80,18 +80,23 @@ export const CtaSection = () => {
 
     useEffect(() => {
       if (isInView) {
-        let start = 0;
-        const duration = 1.2;
-        const totalFrames = duration * 60;
-        let frame = 0;
-        const timer = setInterval(() => {
-          frame++;
-          const progress = frame / totalFrames;
-          const current = Math.round(start + (value - start) * (1 - Math.pow(1 - progress, 3)));
-          setDisplayValue(current);
-          if (frame >= totalFrames) clearInterval(timer);
-        }, 1000 / 60);
-        return () => clearInterval(timer);
+        let startTimestamp: number | null = null;
+        const duration = 1200; // ms
+
+        const step = (timestamp: number) => {
+          if (!startTimestamp) startTimestamp = timestamp;
+          const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+
+          // Cubic ease out
+          const easeProgress = 1 - Math.pow(1 - progress, 3);
+          setDisplayValue(Math.round(value * easeProgress));
+
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          }
+        };
+
+        window.requestAnimationFrame(step);
       }
     }, [value, isInView]);
 
@@ -422,7 +427,7 @@ export const CtaSection = () => {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
-                className="bg-secondary/40 backdrop-blur-sm rounded-[2rem] p-8 border border-primary/10 space-y-6 relative overflow-hidden group"
+                className="bg-secondary/40 backdrop-blur-sm rounded-[2rem] max-[480px]:p-4 p-8 border border-primary/10 space-y-6 relative overflow-hidden group"
               >
                 <div className="absolute -top-12 -right-12 p-8 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity pointer-events-none">
                   <Calculator className="w-64 h-64" />
@@ -436,7 +441,7 @@ export const CtaSection = () => {
                     <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-1">
                       {t('cta.result.estimation')}
                     </p>
-                    <div className="text-3xl md:text-5xl font-semibold flex items-baseline gap-1">
+                    <div className=" max-[480px]:text-sm text-3xl md:text-5xl font-semibold flex items-baseline gap-1">
                       <span className="text-2xl mr-1">💰</span>
                       <NumberCounter value={displayPriceMin} suffix=" – " />
                       <NumberCounter value={displayPriceMax} suffix={currencyData.symbol} />
@@ -452,7 +457,7 @@ export const CtaSection = () => {
                     <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-1">
                       {t('cta.result.timeline')}
                     </p>
-                    <div className="text-2xl md:text-3xl font-medium flex items-center gap-2">
+                    <div className="max-[480px]:text-sm text-2xl md:text-3xl font-medium flex items-center gap-2">
                       <span>⏱️</span>
                       <NumberCounter value={results.minWeeks} />
                       <span>–</span>

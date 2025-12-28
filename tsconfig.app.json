@@ -21,6 +21,10 @@
     "noImplicitAny": false,
     "noFallthroughCasesInSwitch": false,
 
+    /* Performance */
+    "incremental": false,
+    "composite": false,
+
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]

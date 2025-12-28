@@ -8,7 +8,7 @@ export const Footer = () => {
   const { theme } = useTheme();
 
   const servicesLinks = [
-    { label: t('footer.services'), href: "#services" },
+
     { label: t('nav.services'), href: "#services" },
     { label: t('nav.cases'), href: "#cases" },
     { label: t('nav.process'), href: "#process" },

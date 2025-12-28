@@ -5,12 +5,21 @@ import { ShieldCheck, Award, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
+import { useTheme } from "@/components/theme-provider";
+
 import itParkLogo from "@/assets/IT_park_logo.png";
+import itParkLogoLight from "@/assets/IT_park_logo_light.png";
 
 export const ITParkSection = () => {
     const { t } = useTranslation();
+    const { theme } = useTheme();
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+    // Determine which logo to use based on theme
+    const isDark = theme === "dark" ||
+        (theme === "system" && typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    const logoSrc = isDark ? itParkLogo : itParkLogoLight;
 
     return (
         <section className="section-padding overflow-hidden" ref={ref}>
@@ -79,11 +88,11 @@ export const ITParkSection = () => {
 
                         <div className="relative group rounded-3xl overflow-hidden border border-border shadow-2xl bg-card/40 backdrop-blur-md p-8 md:p-12 flex flex-col items-center text-center">
                             <motion.div
-                                className="w-32 h-32 md:w-40 md:h-40 bg-white rounded-2xl p-6 shadow-sm mb-8 flex items-center justify-center border border-border/50"
+                                className={`w-32 h-32 ${isDark ? "bg-black" : "bg-white"}  md:w-40 md:h-40 rounded-2xl p-6 shadow-sm mb-8 flex items-center justify-center border border-border/50`}
                                 whileHover={{ scale: 1.05, rotate: 2 }}
                                 transition={{ type: "spring", stiffness: 300 }}
                             >
-                                <img src={itParkLogo} alt="IT Park Logo" className="w-full h-auto grayscale contrast-125" />
+                                <img src={logoSrc} alt="IT Park Logo" className="w-full h-auto" />
                             </motion.div>
 
                             <h3 className="text-2xl font-medium mb-4">{t('itpark.title')}</h3>

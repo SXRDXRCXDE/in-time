@@ -13,8 +13,8 @@ const HeroBackgroundAnimation: React.FC = () => {
 
         const sketch = (p: p5) => {
             let particles: Particle[] = [];
-            const numParticles = isMobile ? 30 : 80;
-            const maxDistance = isMobile ? 100 : 150;
+            const numParticles = isMobile ? 20 : 50;
+            const maxDistance = isMobile ? 80 : 120;
             const isDark = theme === "dark";
 
             class Particle {
@@ -65,7 +65,7 @@ const HeroBackgroundAnimation: React.FC = () => {
             };
 
             p.draw = () => {
-                p.clear(0, 0, 0, 0); // Transparent background
+                p.clear(0, 0, 0, 0);
 
                 let colorVal = isDark ? 255 : 0;
                 let mousePos = p.createVector(p.mouseX, p.mouseY);
@@ -74,7 +74,6 @@ const HeroBackgroundAnimation: React.FC = () => {
                     particles[i].update();
                     particles[i].display();
 
-                    // Only draw lines to mouse on non-mobile devices
                     if (!isMobile) {
                         let dMouse = p.dist(mousePos.x, mousePos.y, particles[i].pos.x, particles[i].pos.y);
                         if (dMouse < maxDistance + 50) {
@@ -90,22 +89,6 @@ const HeroBackgroundAnimation: React.FC = () => {
                             p.stroke(colorVal, alpha);
                             p.strokeWeight(1);
                             p.line(particles[i].pos.x, particles[i].pos.y, particles[j].pos.x, particles[j].pos.y);
-
-                            // Reduced complexity for triangles on mobile
-                            if (!isMobile) {
-                                for (let k = j + 1; k < particles.length; k++) {
-                                    let d2 = p.dist(particles[j].pos.x, particles[j].pos.y, particles[k].pos.x, particles[k].pos.y);
-                                    if (d2 < maxDistance - 30) {
-                                        p.noStroke();
-                                        p.fill(colorVal, alpha * 0.1);
-                                        p.triangle(
-                                            particles[i].pos.x, particles[i].pos.y,
-                                            particles[j].pos.x, particles[j].pos.y,
-                                            particles[k].pos.x, particles[k].pos.y
-                                        );
-                                    }
-                                }
-                            }
                         }
                     }
                 }
