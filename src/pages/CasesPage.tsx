@@ -7,7 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import HeroBackgroundAnimation from "@/components/HeroBackgroundAnimation/HeroBackgroundAnimation";
 
-const getFirstImage = (id: string) => `/src/assets/${id}/1.jpg`;
+import { getFirstProjectImage } from "@/imagesData/imagesData";
 
 const CasesPage = () => {
     const { t } = useTranslation();
@@ -50,7 +50,7 @@ const CasesPage = () => {
                             >
                                 <Link to={`/cases/${caseItem.id}`} className="relative block overflow-hidden rounded-3xl aspect-[16/10]">
                                     <img
-                                        src={getFirstImage(caseItem.id)}
+                                        src={getFirstProjectImage(caseItem.id)}
                                         alt={caseItem.title}
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
                                     />

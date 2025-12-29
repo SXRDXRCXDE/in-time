@@ -15,7 +15,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const getFirstImage = (id: string) => `/src/assets/${id}/1.jpg`;
+import { getFirstProjectImage } from "@/imagesData/imagesData";
 
 export const CasesSection = () => {
   const { t } = useTranslation();
@@ -110,7 +110,7 @@ export const CasesSection = () => {
                 <div className="group relative flex flex-col gap-4 h-full">
                   <Link to={`/cases/${caseItem.id}`} className="relative overflow-hidden rounded-2xl cursor-pointer aspect-[4/3] block">
                     <img
-                      src={getFirstImage(caseItem.id)}
+                      src={getFirstProjectImage(caseItem.id)}
                       alt={caseItem.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
                     />

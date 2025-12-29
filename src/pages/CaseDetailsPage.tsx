@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowUpRight, CheckCircle2, ChevronRight, Layout, Zap, Shield, Target, X } from "lucide-react";
 import HeroBackgroundAnimation from "@/components/HeroBackgroundAnimation/HeroBackgroundAnimation";
 import { useState } from "react";
+import { getProjectImages } from "@/imagesData/imagesData";
 
 const CaseDetailsPage = () => {
     const { id } = useParams();
@@ -31,19 +32,7 @@ const CaseDetailsPage = () => {
         );
     }
 
-    // Helper to generate image paths based on ID and common structure
-    const getImages = (projectId: string) => {
-        const counts: Record<string, number> = {
-            'e-agent': 3,
-            'fabrico': 4,
-            'kurochki_telegram_bot': 4,
-            'prihlaseni': 4
-        };
-        const count = counts[projectId] || 0;
-        return Array.from({ length: count }, (_, i) => `/src/assets/${projectId}/${i + 1}.jpg`);
-    };
-
-    const images = getImages(caseItem.id);
+    const images = getProjectImages(caseItem.id);
     const heroImage = images[0] || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop";
 
     return (
