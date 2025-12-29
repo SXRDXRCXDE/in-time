@@ -9,12 +9,12 @@
     },
     "hero": {
         "studio": "Digitální studio",
-        "title1": "Integrované",
-        "title2": "digitální řešení",
-        "title3": "pro vaše podnikání",
-        "description": "Navrhujeme a implementujeme automatizované systémy: web, aplikaci a bota — jako jednotný nástroj pro prodej a správu",
+        "title1": "Proměňujeme chaos",
+        "title2": "ve funkční",
+        "title3": "digitální systém",
+        "description": "Pro malé a střední podniky: rychle navrhujeme a spouštíme web, aplikaci a bota, které optimalizují práci a zvyšují produktivitu.",
         "ctaPrimary": "Spočítat cenu online",
-        "ctaSecondary": "Zobrazit projekty"
+        "ctaSecondary": "Podívejte se, jak optimalizujeme podnikání"
     },
     "services": {
         "tag": "Služby",
@@ -76,24 +76,14 @@
             {
                 "title": "Mezinárodní zkušenost",
                 "desc": "Spolupracujeme s týmy a klienty z různých zemí: Evropy, Izraele a zemí SNS. Rozumíme rozdílům v trzích, mentalitě a očekáváních uživatelů — a zohledňujeme to v designu, logice produktu a komunikaci."
-            }
-        ],
-        "stats": [
-            {
-                "value": "100+",
-                "label": "Projektů"
             },
             {
-                "value": "4",
-                "label": "Roky zkušeností"
+                "title": "Pro koho se hodíme",
+                "desc": "• Malé a střední podniky\n• Startupy ve fázi MVP\n• Firmy, které potřebují rychle spustit a otestovat řešení\n• Ti, kteří chtějí automatizovat procesy, nikoliv jen „hezký web“"
             },
             {
-                "value": "50+",
-                "label": "Klientů"
-            },
-            {
-                "value": "10",
-                "label": "Specialistů"
+                "title": "Pro koho se nehodíme",
+                "desc": "• Korporace s dlouhými tendry a složitou byrokracií\n• Projekty bez jasného rozpočtu a termínů\n• Ti, kteří potřebují design pouze „pro formu“"
             }
         ]
     },
@@ -152,10 +142,11 @@
     "cta": {
         "title": "Jste připraveni probrat ",
         "titleSpan": "váš projekt",
-        "subtitle": "Řekněte nám o svém nápadu a mi navrhneme optimální řešení",
+        "subtitle": "Odpovězte na několik otázek — ukážeme vám orientační cenu a termíny. Nezávazně.",
         "steps": {
             "step1": {
                 "question": "Co chcete udělat?",
+                "subtitle": "Můžete zvolit „nejsem si jist“ — pomůžeme vám určit formát.",
                 "options": {
                     "site": "Web",
                     "app": "Aplikace",
@@ -166,6 +157,7 @@
             },
             "step2": {
                 "question": "Proč projekt?",
+                "subtitle": "Vyberte hlavní úkol — detaily upřesníme později.",
                 "options": {
                     "mvp": "MVP",
                     "sales": "Prodej",
@@ -176,6 +168,7 @@
             },
             "step3": {
                 "question": "Odhadovaný rozsah",
+                "subtitle": "Pokud váháte, zvolte střední variantu.",
                 "options": {
                     "simple": "Jednoduchý (landing / základní bot)",
                     "medium": "Střední",
@@ -184,6 +177,7 @@
             },
             "step4": {
                 "question": "Rozpočet",
+                "subtitle": "Rozpočet nám pomáhá pochopit vaše očekávání a navrhnout optimální variantu.",
                 "options": {
                     "under500": "do €500",
                     "500-1000": "€500-1000",
@@ -194,6 +188,7 @@
             },
             "step5": {
                 "question": "Termín",
+                "subtitle": "Urgentní projekty vyžadují vyhrazený tým.",
                 "options": {
                     "urgent": "urgentní",
                     "1-2months": "1–2 měsíce",
@@ -216,8 +211,8 @@
             "weeks": "týdnů",
             "weeksRange": "{{min}}–{{max}} {{unit}}",
             "priceRange": "{{min}} – {{max}} €",
-            "disclaimer": "Jedná se o orientační odhad. Finální cena závisí na detailech projektu.",
-            "toContact": "Další",
+            "disclaimer": "Odhad je vytvořen na základě vašich odpovědí a odráží typický rozsah prací pro podobné projekty.",
+            "toContact": "Přejít k diskusi",
             "liveEstimate": "Živý odhad"
         },
         "calculating": "Analyzujeme parametry...",

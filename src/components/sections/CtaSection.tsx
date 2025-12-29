@@ -265,7 +265,10 @@ export const CtaSection = () => {
       case 1:
         return (
           <div className="space-y-6 p-1">
-            <h3 className="text-2xl md:text-3xl font-medium mb-8">{t('cta.steps.step1.question')}</h3>
+            <div className="mb-8">
+              <h3 className="text-2xl md:text-3xl font-medium mb-2">{t('cta.steps.step1.question')}</h3>
+              <p className="text-muted-foreground text-lg">{t('cta.steps.step1.subtitle')}</p>
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {Object.entries(t('cta.steps.step1.options', { returnObjects: true })).map(([key, value]) => {
                 const Icon = stepIcons[key] || HelpCircle;
@@ -294,7 +297,10 @@ export const CtaSection = () => {
       case 2:
         return (
           <div className="space-y-6 p-1">
-            <h3 className="text-2xl md:text-3xl font-medium mb-8">{t('cta.steps.step2.question')}</h3>
+            <div className="mb-8">
+              <h3 className="text-2xl md:text-3xl font-medium mb-2">{t('cta.steps.step2.question')}</h3>
+              <p className="text-muted-foreground text-lg">{t('cta.steps.step2.subtitle')}</p>
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {Object.entries(t('cta.steps.step2.options', { returnObjects: true })).map(([key, value]) => {
                 const Icon = stepIcons[key] || Layout;
@@ -323,7 +329,10 @@ export const CtaSection = () => {
       case 3:
         return (
           <div className="space-y-6 p-1">
-            <h3 className="text-2xl md:text-3xl font-medium mb-8">{t('cta.steps.step3.question')}</h3>
+            <div className="mb-8">
+              <h3 className="text-2xl md:text-3xl font-medium mb-2">{t('cta.steps.step3.question')}</h3>
+              <p className="text-muted-foreground text-lg">{t('cta.steps.step3.subtitle')}</p>
+            </div>
             <div className="grid grid-cols-1 gap-4">
               {Object.entries(t('cta.steps.step3.options', { returnObjects: true })).map(([key, value]) => {
                 const Icon = stepIcons[key] || Layers;
@@ -352,7 +361,10 @@ export const CtaSection = () => {
       case 4:
         return (
           <div className="space-y-6 p-1">
-            <h3 className="text-2xl md:text-3xl font-medium mb-8">{t('cta.steps.step4.question')}</h3>
+            <div className="mb-8">
+              <h3 className="text-2xl md:text-3xl font-medium mb-2">{t('cta.steps.step4.question')}</h3>
+              <p className="text-muted-foreground text-lg">{t('cta.steps.step4.subtitle')}</p>
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {Object.entries(t('cta.steps.step4.options', { returnObjects: true })).map(([key, value]) => (
                 <Button
@@ -378,7 +390,10 @@ export const CtaSection = () => {
       case 5:
         return (
           <div className="space-y-6 p-1">
-            <h3 className="text-2xl md:text-3xl font-medium mb-8">{t('cta.steps.step5.question')}</h3>
+            <div className="mb-8">
+              <h3 className="text-2xl md:text-3xl font-medium mb-2">{t('cta.steps.step5.question')}</h3>
+              <p className="text-muted-foreground text-lg">{t('cta.steps.step5.subtitle')}</p>
+            </div>
             <div className="grid grid-cols-1 gap-4">
               {Object.entries(t('cta.steps.step5.options', { returnObjects: true })).map(([key, value]) => (
                 <Button

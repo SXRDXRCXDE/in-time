@@ -9,12 +9,12 @@
     },
     "hero": {
         "studio": "Digital development studio",
-        "title1": "Integrated",
-        "title2": "digital solutions",
-        "title3": "for your business",
-        "description": "We develop digital products that help businesses grow and stand out from competitors",
+        "title1": "Turning chaos",
+        "title2": "into a working",
+        "title3": "digital system",
+        "description": "For small and medium businesses: we quickly design and launch a website, app, and bot that optimize work and increase productivity.",
         "ctaPrimary": "Calculate price online",
-        "ctaSecondary": "View cases"
+        "ctaSecondary": "See how we optimize business"
     },
     "services": {
         "tag": "Services",
@@ -84,24 +84,14 @@
             {
                 "title": "Reliable team",
                 "desc": "Close-knit team of senior specialists with experience in major projects."
-            }
-        ],
-        "stats": [
-            {
-                "value": "100+",
-                "label": "Projects"
             },
             {
-                "value": "8",
-                "label": "Years experience"
+                "title": "Who we are for",
+                "desc": "• Small and medium businesses\n• Startups at the MVP stage\n• Companies that need to quickly launch and test a solution\n• Those who want to automate processes, not just a \"beautiful site\""
             },
             {
-                "value": "50+",
-                "label": "Clients"
-            },
-            {
-                "value": "15",
-                "label": "Specialists"
+                "title": "Who we are not for",
+                "desc": "• Corporations with long tenders and complex bureaucracy\n• Projects without a clear budget and deadlines\n• Those who only need design \"for the sake of form\""
             }
         ]
     },
@@ -160,10 +150,11 @@
     "cta": {
         "title": "Ready to discuss ",
         "titleSpan": "your project",
-        "subtitle": "Tell us about your idea, and we will propose the optimal solution",
+        "subtitle": "Answer a few questions — we will show you an estimated cost and timeline. No obligations.",
         "steps": {
             "step1": {
                 "question": "What of you want to do?",
+                "subtitle": "You can select \"not sure\" — we will help define the format.",
                 "options": {
                     "site": "Website",
                     "app": "App",
@@ -174,6 +165,7 @@
             },
             "step2": {
                 "question": "What is the project for?",
+                "subtitle": "Choose the main task — we will clarify details later.",
                 "options": {
                     "mvp": "MVP",
                     "sales": "Sales",
@@ -184,6 +176,7 @@
             },
             "step3": {
                 "question": "Approximate scale",
+                "subtitle": "If you are in doubt, choose the medium option.",
                 "options": {
                     "simple": "Simple (landing / basic bot)",
                     "medium": "Medium",
@@ -192,6 +185,7 @@
             },
             "step4": {
                 "question": "Budget",
+                "subtitle": "Budget helps us understand your expectations and offer the best option.",
                 "options": {
                     "under500": "up to €500",
                     "500-1000": "€500-1000",
@@ -202,6 +196,7 @@
             },
             "step5": {
                 "question": "Timeline",
+                "subtitle": "Urgent projects require a dedicated team.",
                 "options": {
                     "urgent": "urgent",
                     "1-2months": "1–2 months",
@@ -224,8 +219,8 @@
             "weeks": "weeks",
             "weeksRange": "{{min}}–{{max}} {{unit}}",
             "priceRange": "{{min}} – {{max}} €",
-            "disclaimer": "This is a rough estimate. The final cost depends on project details.",
-            "toContact": "Next",
+            "disclaimer": "The estimate is based on your answers and reflects a typical scope of work for similar projects.",
+            "toContact": "Proceed to discussion",
             "liveEstimate": "Live Estimate"
         },
         "calculating": "Analyzing parameters...",
