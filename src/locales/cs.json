@@ -36,28 +36,185 @@
     },
     "cases": {
         "tag": "Projekty",
-        "title": "Vybrané projekty",
+        "title": "Jak řešíme úkoly",
         "button": "Všechny projekty",
+        "more": "Více informací",
         "items": [
             {
-                "title": "E-commerce platforma",
-                "cat": "Webový vývoj",
-                "res": "+340% konverze"
+                "id": "e-agent",
+                "title": "E-Agent",
+                "cat": "Automatizace distribuce",
+                "res": "Kontrola 100%",
+                "fullDescription": "E-Agent není jen nástroj pro objednávání. Je to operační systém pro distribuční firmu. Propojuje výrobce, obchody, sklady, řidiče a účetnictví do jednoho řízeného okruhu. Jeho hodnota nespočívá v 'hezkém rozhraní', ale v kontrole procesů, eliminaci manuálního chaosu a schopnosti škálovat bez ztráty kontroly.\n\nE-Agent proměňuje roztříštěné hovory, chaty a tabulky v transparentní systém: s jasnými skladovými zůstatky, fixními akcemi personálu, flexibilními cenami a předvídatelnou logistikou. Je to produkt pro ty, kteří chtějí řídit distribuci jako systém, namísto každodenního hašení operativních požárů.",
+                "challenges": [
+                    {
+                        "p": "Roztříštěná komunikace mezi prodejcem, výrobcem, skladem a řidičem",
+                        "s": "Jednotné pracovní prostředí, kde všichni účastníci pracují v jednom okruhu: objednávky, faktury, stavy, historie akcí."
+                    },
+                    {
+                        "p": "Chyby a ztráty kvůli manuálnímu objednávání (WhatsApp, hovory, Excel)",
+                        "s": "Standardized ordering in the app in a few clicks, without interpretations and 'human factor'."
+                    },
+                    {
+                        "p": "Absence transparentní kontroly skladových zásob",
+                        "s": "Online sledování zásob se synchronizací mezi skladem, řidiči a obchody."
+                    },
+                    {
+                        "p": "Pomalý a chybový příjem zboží ve skladu",
+                        "s": "Skenování čárových kódů pomocí kamery, okamžité přidání a ověření zboží bez ručního vyhledávání."
+                    },
+                    {
+                        "p": "Řidiči ztrácejí čas, pletou si objednávky a zákazníky",
+                        "s": "Samostatné rozhraní pro řidiče: mapa, seznam objednávek, zákazníci, geovyhledávání, skladové zásoby, kalkulačka dluhů."
+                    },
+                    {
+                        "p": "Chybějící kontrola nad činností personálu",
+                        "s": "Protokol aktivit a model přístupu založený na rolích: viditelnost toho, kdo co udělal, s možností omezit konkrétní funkce."
+                    },
+                    {
+                        "p": "Potíže s prací s různými typy zákazníků (soukromníci, obchody, restaurace, velkoobchod)",
+                        "s": "Flexibilní cenový systém umožňující neomezené cenové kategorie pro různé typy spotřebitelů."
+                    },
+                    {
+                        "p": "Mezera mezi operativou a účetnictvím",
+                        "s": "Integrace s chatboty, kteří automaticky odesílají objednávky a změny do účetních a skladových kanálů."
+                    },
+                    {
+                        "p": "Manuální práce s Excelem a 1C, duplikace dat",
+                        "s": "Obousměrná integrace s Excelem a 1C: příjem zboží, export reportů, generování faktur pro řidiče."
+                    },
+                    {
+                        "p": "Absence škálovatelného distribučního systému pro výrobce",
+                        "s": "E-Agent jako distribuční platforma kombinující správu produktů, objednávek, logistiky a zúčtování v jednom nástroji."
+                    }
+                ]
             },
             {
-                "title": "Fintech mobilní aplikace",
-                "cat": "iOS & Android",
-                "res": "500K+ stažení"
+                "id": "fabrico",
+                "title": "Fabrico",
+                "cat": "Automatizace ateliéru",
+                "res": "Růst loajality +60%",
+                "fullDescription": "Aplikace pro ateliér, která vnáší řád do objednávek. Vytváří transparentní prostředí pro interakci mezi klientem a mistrem: klienti mohou kdykoli vidět stav svých objednávek a účastnit se věrnostního programu, zatímco majitel získává plnou kontrolu nad termíny, frontou prací a detailním reportováním na jednom místě.",
+                "challenges": [
+                    {
+                        "p": "Chaos v evidenci objednávek a papírování",
+                        "s": "Jednotná digitální databáze všech objednávek s rychlým vyhledáváním a filtrováním."
+                    },
+                    {
+                        "p": "Klienti neustále volají, aby zjistili stav objednávky",
+                        "s": "Osobní účet klienta, kde se v reálném čase zobrazuje fáze připravenosti produktu."
+                    },
+                    {
+                        "p": "Potíže s udržením klientů a nedostatek marketingových nástrojů",
+                        "s": "Vestavěný věrnostní program se systémem bonusů a osobních nabídek."
+                    },
+                    {
+                        "p": "Problémy s kontrolou termínů a vytížením mistrů",
+                        "s": "Inteligentní řízení fronty prací a automatická upozornění na termíny."
+                    },
+                    {
+                        "p": "Nepochopení reálného zisku a efektivity podnikání",
+                        "s": "Modul analýzy a reportování, ukazující vytížení, tržby a oblíbené služby na jedno kliknutí."
+                    }
+                ]
             },
             {
-                "title": "Firemní portál",
-                "cat": "Enterprise",
-                "res": "x2 výkon"
+                "id": "prihlaseni",
+                "title": "Prihlaseni Portal",
+                "cat": "Sociální výzkum",
+                "res": "Přesnost dat 100%",
+                "fullDescription": "Není to jen dotazníková aplikace, ale nástroj pro ochranu kvality dat. Umožňuje bezpečně provádět online i offline výzkumy díky principu 'jeden odkaz - jedna odpověď', který vylučuje spam a zkreslení výsledků. Průzkumy jsou dostupné přes QR kód bez instalace aplikací, výsledky se zaznamenávají okamžitě a exportují k analýze.",
+                "challenges": [
+                    {
+                        "p": "Online dotazníky lze snadno zaspamovat a zkreslit výsledky",
+                        "s": "Princip 'jeden odkaz - jedna odpověď': každý odkaz vede k unikátnímu listu a nelze jej použít znovu."
+                    },
+                    {
+                        "p": "Odkazy na dotazníky jsou nebezpečné při přeposílání třetím osobám",
+                        "s": "Izolované jednorázové dotazníky, které se neškálují a nekazí vzorek ani v případě úniku odkazu."
+                    },
+                    {
+                        "p": "Obtížné provádění průzkumů offline (ulice, akce)",
+                        "s": "Generování QR kódu za běhu, umožňující vyplnění dotazníku bez instalace aplikace."
+                    },
+                    {
+                        "p": "Nepohodlné pro respondenta - nutnost něco instalovat nebo registrovat",
+                        "s": "Webový průzkum přes QR kód, stačí fotoaparát telefonu a prohlížeč."
+                    },
+                    {
+                        "p": "Tazatel je nucen stát poblíž a čekat na konec dotazníku",
+                        "s": "Výsledek se zaznamenává od prvního kliknutí, do databáze se dostane i nedokončený dotazník."
+                    },
+                    {
+                        "p": "Poslední otázky v dotazníku zůstávají hromadně bez odpovědí",
+                        "s": "Randomizace pořadí otázek zajišťující rovnoměrné vyplnění celého dotazníku."
+                    },
+                    {
+                        "p": "Žádná flexibilita v typech otázek",
+                        "s": "Tvůrce dotazníků uvnitř aplikace: možnosti odpovědí, otevřené otázky, různé struktury."
+                    },
+                    {
+                        "p": "Obtížné sledování průběhu výzkumu v reálném čase",
+                        "s": "Průběžné výsledky přímo v aplikaci bez čekání na ukončení průzkumu."
+                    },
+                    {
+                        "p": "Manuální zpracování dat po sběru",
+                        "s": "Export odpovědí do Excelu pro analýzu, reporty a další zpracování."
+                    },
+                    {
+                        "p": "Žádný záložní scénář, pokud respondent nemá telefon",
+                        "s": "Možnost vyplnění dotazníku přímo přes aplikaci tazatele na místě."
+                    }
+                ]
             },
             {
-                "title": "Retail Telegram bot",
-                "cat": "Automatizace",
-                "res": "10K+ uživatelů"
+                "id": "kurochki_telegram_bot",
+                "title": "Kurochki Bot",
+                "cat": "E-commerce v Telegramu",
+                "res": "15k Aktivních uživatelů",
+                "fullDescription": "Není to jen Telegram bot pro přijímání objednávek, ale nástroj pro řízení operací doručení. Proměňuje chaotické zprávy zákazníků v strukturovaný tok objednávek, rozdělený podle dnů, řidičů a tras. Jeho hodnota nespočívá v tlačítkách a menu, ale v předvídatelnosti, plánování a omezení manuální práce.\n\nBot umožňuje sbírat objednávky předem, automaticky generovat faktury, distribuovat je mezi doručovatele a sestavovat optimální trasy bez zbytečného ježdění po městě. Řidič obdrží jasný seznam úkolů a firma získá historii objednávek a data pro analýzu. Je to řešení pro ty, kteří chtějí řídit doručení systémově, nikoliv sbírat objednávky přes chaty a vše držet v hlavě.",
+                "challenges": [
+                    {
+                        "p": "Objednávky přicházejí chaoticky v chatech a ztrázejí se",
+                        "s": "Strukturovaný příjem objednávek přes bota, všechny požadavky jsou shromažďovány v jednom formátu bez ruční korespondence."
+                    },
+                    {
+                        "p": "Nemožné předem pochopit objem objednávek na den",
+                        "s": "Systematizace objednávek podle dnů v týdnu s možností akumulace a plánování předem."
+                    },
+                    {
+                        "p": "Manuální předávání objednávek doručovatelům",
+                        "s": "Automatické odesílání objednávek řidičům ve správný okamžik, bez kopírování a přeposílání."
+                    },
+                    {
+                        "p": "Absence jasného akčního plánu pro den doručení",
+                        "s": "Vestavěný časovač a odložené odesílání, umožňující připravit pracovní plán předem."
+                    },
+                    {
+                        "p": "Chyby při shromažďování objednávek pro řidiče",
+                        "s": "Automatické generování faktur se seznamem potřebného zboží pro konkrétního doručovatele."
+                    },
+                    {
+                        "p": "Řidiči ztrácejí čas chaotickým pohybem po městě",
+                        "s": "Optimalizace trasy podle geolokací, objednávky jsou sestaveny v logickém pořadí."
+                    },
+                    {
+                        "p": "Žádná kontrola nad plněním objednávek řidičem",
+                        "s": "Vestavěný seznam úkolů, každá objednávka je zaznamenána jako splněná."
+                    },
+                    {
+                        "p": "Nemožné analyzovat minulé objednávky a vytížení",
+                        "s": "Ukládání historie objednávek pro následnou analýzu a manažerská rozhodnutí."
+                    },
+                    {
+                        "p": "Obtížné provádění opakovaných prodejů a oznámení klientům",
+                        "s": "Funkce reklamního a informačního rozesílání na základnu klientů."
+                    },
+                    {
+                        "p": "Flexibilita sortimentu je omezena manuální správou",
+                        "s": "Flexibilní nastavení produktů a struktur uvnitř bota bez neustálého vylepšování."
+                    }
+                ]
             }
         ]
     },
@@ -226,7 +383,7 @@
     "itpark": {
         "tag": "Rezident",
         "title": "Rezident IT Park Uzbekistan",
-        "desc": "In Time je oficiálním rezidentem technologického parku softwarových produktů a informačních technologií (IT Park). To potvrzuje náš status spolehlivého IT partnera, který splňuje mezinárodní standardy kvality a transparentnosti podnikání.",
+        "desc": "In Time is oficiálním rezidentem technologického parku softwarových produktů a informačních technologií (IT Park). To potvrzuje náš status spolehlivého IT partnera, který splňuje mezinárodní standardy kvality a transparentnosti podnikání.",
         "button": "Zobrazit certifikát",
         "status": "Oficiální status",
         "quality": "Standardy kvality",
@@ -246,7 +403,29 @@
         "terms": "Podmínky použití"
     },
     "common": {
+        "back": "Zpět k projektům",
         "step": "Krok",
         "done": "Hotovo"
+    },
+    "caseDetails": {
+        "notFound": "Projekt nenalezen",
+        "backToCases": "Zpět k projektům",
+        "analysis": "Rozbor projektu",
+        "concept": "Koncept produktu",
+        "specs": "Vlastnosti",
+        "category": "Obor",
+        "result": "Výsledek",
+        "security": "Bezpečnost",
+        "tools": "Nástroje",
+        "challengesTitle": "Problém → Řešení",
+        "challengesDesc": "Klíčové výzvy projektu a to, jak jsme je transformovali do efektivních nástrojů řízení.",
+        "problem": "Problém",
+        "solution": "Naše řešení",
+        "interface": "Rozhraní systému",
+        "interfaceDesc": "Vizualizace pracovních procesů",
+        "ctaTitle": "Jste připraveni digitalizovat svůj podnik?",
+        "ctaDesc": "Vytváříme víc než jen aplikace – budujeme nástroje pro exponenciální růst. Pojďme probrat, které procesy ve vaší společnosti potřebují automatizaci již dnes.",
+        "ctaPrimary": "Objednat konzultaci",
+        "ctaSecondary": "Zobrazit další projekty"
     }
 }

@@ -3,21 +3,23 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Globe, Menu, Moon, Sun, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 import lightLogo from "@/assets/light_logo.png";
 
 import { useTheme } from "@/components/theme-provider";
 
 const navLinks = [
-  { label: "nav.services", href: "#services" },
-  { label: "nav.cases", href: "#cases" },
-  { label: "nav.process", href: "#process" },
-  { label: "nav.reviews", href: "#reviews" },
+  { label: "nav.services", href: "/#services" },
+  { label: "nav.cases", href: "/#cases" },
+  { label: "nav.process", href: "/#process" },
+  { label: "nav.reviews", href: "/#reviews" },
 ];
 
 export const Header = () => {
   const { t, i18n } = useTranslation();
   const { theme, setTheme } = useTheme();
+  const { pathname } = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLang, setIsLang] = useState(false);
@@ -52,6 +54,19 @@ export const Header = () => {
     };
   }, []);
 
+  const handleLinkClick = (href: string) => {
+    setIsMobileMenuOpen(false);
+    if (href.startsWith('/#')) {
+      if (pathname === '/') {
+        const id = href.replace('/#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+  };
+
   return (
     <>
       <motion.header
@@ -62,26 +77,37 @@ export const Header = () => {
           }`}
       >
         <div className="container-custom flex items-center justify-between">
-          <motion.a
-            href="#"
-            className="flex items-center gap-3"
-            whileHover={{ scale: 1.02 }}
-          >
-            <img src={theme === "light" ? lightLogo : logo} alt="In Time" className="h-10 w-auto" />
-            <span className="text-xl font-bold tracking-tight text-foreground font-extended">
-              In Time
-            </span>
-          </motion.a>
+          <motion.div whileHover={{ scale: 1.02 }}>
+            <Link
+              to="/"
+              className="flex items-center gap-3"
+            >
+              <img src={theme === "light" ? lightLogo : logo} alt="In Time" className="h-10 w-auto" />
+              <span className="text-xl font-bold tracking-tight text-foreground font-extended">
+                In Time
+              </span>
+            </Link>
+          </motion.div>
 
           <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline"
-              >
-                {t(link.label)}
-              </a>
+              pathname === '/' && link.href.startsWith('/#') ? (
+                <a
+                  key={link.href}
+                  href={link.href.replace('/', '')}
+                  className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline"
+                >
+                  {t(link.label)}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline"
+                >
+                  {t(link.label)}
+                </Link>
+              )
             ))}
           </nav>
 
@@ -132,7 +158,13 @@ export const Header = () => {
               </AnimatePresence>
             </div>
 
-            <Button onClick={() => window.scrollTo({ top: document.getElementById('contact')?.offsetTop || 0 })} variant="hero" size="lg" className="hidden md:inline-flex">
+            <Button onClick={() => {
+              if (pathname === '/') {
+                window.scrollTo({ top: document.getElementById('contact')?.offsetTop || 0, behavior: 'smooth' });
+              } else {
+                window.location.href = '/#contact';
+              }
+            }} variant="hero" size="lg" className="hidden md:inline-flex">
               {t('nav.contact')}
             </Button>
 
@@ -158,19 +190,29 @@ export const Header = () => {
           >
             <nav className="container-custom flex flex-col gap-4">
               {navLinks.map((link, index) => (
-                <motion.a
+                <motion.div
                   key={link.href}
-                  href={link.href}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-2xl font-light text-muted-foreground hover:text-foreground transition-colors py-3 border-b border-border"
                 >
-                  {t(link.label)}
-                </motion.a>
+                  <Link
+                    to={link.href}
+                    onClick={() => handleLinkClick(link.href)}
+                    className="text-2xl font-light text-muted-foreground hover:text-foreground transition-colors py-3 border-b border-border block"
+                  >
+                    {t(link.label)}
+                  </Link>
+                </motion.div>
               ))}
-              <Button variant="hero" size="xl" className="mt-6">
+              <Button onClick={() => {
+                setIsMobileMenuOpen(false);
+                if (pathname === '/') {
+                  window.scrollTo({ top: document.getElementById('contact')?.offsetTop || 0, behavior: 'smooth' });
+                } else {
+                  window.location.href = '/#contact';
+                }
+              }} variant="hero" size="xl" className="mt-6">
                 {t('nav.contact')}
               </Button>
             </nav>

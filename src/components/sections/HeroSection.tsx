@@ -123,11 +123,19 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.9 }}
             className="flex flex-col sm:flex-row gap-4"
           >
-            <Button onClick={() => window.scrollTo({ top: document.getElementById('contact')?.offsetTop || 0 })} variant="hero" size="xl">
+            <Button
+              onClick={() => window.scrollTo({ top: document.getElementById('contact')?.offsetTop || 0 })}
+              variant="hero"
+              className="h-12 sm:h-14 px-6 sm:px-10 text-base sm:text-lg rounded-xl w-full sm:w-auto"
+            >
               {t('hero.ctaPrimary')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button onClick={() => window.scrollTo({ top: document.getElementById('reviews')?.offsetTop || 0 })} variant="heroOutline" size="xl">
+            <Button
+              onClick={() => window.scrollTo({ top: document.getElementById('reviews')?.offsetTop || 0 })}
+              variant="heroOutline"
+              className="h-12 sm:h-14 px-6 sm:px-10 text-base sm:text-lg rounded-xl w-full sm:w-auto"
+            >
               {t('hero.ctaSecondary')}
             </Button>
           </motion.div>

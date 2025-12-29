@@ -36,28 +36,185 @@
     },
     "cases": {
         "tag": "Cases",
-        "title": "Featured Projects",
+        "title": "How we solve tasks",
         "button": "All cases",
+        "more": "Learn More",
         "items": [
             {
-                "title": "E-commerce Platform",
-                "cat": "Web Development",
-                "res": "+340% conversion"
+                "id": "e-agent",
+                "title": "E-Agent",
+                "cat": "Distribution Automation",
+                "res": "100% Control",
+                "fullDescription": "E-Agent is not just an ordering tool. It is the operating system for a distribution business. It connects manufacturers, shops, warehouses, drivers, and accounting into a single managed loop. Its value lies not in a 'pretty interface', but in process control, elimination of manual chaos, and the ability to scale without losing control.\n\nE-Agent turns scattered calls, chats, and tables into a transparent system: with clear stock balances, fixed personnel actions, flexible prices, and predictable logistics. It is a product for those who want to manage distribution as a system, rather than fighting operational fires every day.",
+                "challenges": [
+                    {
+                        "p": "Scattered communication between seller, manufacturer, warehouse, and driver",
+                        "s": "A unified workspace where all participants work in one loop: orders, invoices, statuses, action history."
+                    },
+                    {
+                        "p": "Errors and losses due to manual ordering (WhatsApp, calls, Excel)",
+                        "s": "Standardized ordering in the app in a few clicks, without interpretations and the 'human factor'."
+                    },
+                    {
+                        "p": "Lack of transparent inventory control",
+                        "s": "Online inventory tracking with synchronization between warehouse, drivers and shops."
+                    },
+                    {
+                        "p": "Slow and error-prone warehouse receiving",
+                        "s": "Barcode scanning via camera, instant addition and verification of goods without manual search."
+                    },
+                    {
+                        "p": "Drivers lose time, get confused with orders and customers",
+                        "s": "Dedicated driver interface: map, order list, customers, geo-search, inventory, debt calculator."
+                    },
+                    {
+                        "p": "Lack of control over personnel actions",
+                        "s": "Activity log and role-based access model: visibility of who did what, with the ability to restrict specific functions."
+                    },
+                    {
+                        "p": "Difficulty working with different customer types (private, shops, restaurants, wholesale)",
+                        "s": "Flexible pricing system allowing unlimited price categories for different consumer types."
+                    },
+                    {
+                        "p": "Gap between operations and accounting",
+                        "s": "Integration with chatbots that automatically send orders and changes to accounting and warehouse channels."
+                    },
+                    {
+                        "p": "Manual work with Excel and 1C, data duplication",
+                        "s": "Two-way integration with Excel and 1C: goods receiving, report export, invoice generation for drivers."
+                    },
+                    {
+                        "p": "Lack of a scalable distribution system for the manufacturer",
+                        "s": "E-Agent as a distribution platform combining product, order, logistics, and settlement management in one tool."
+                    }
+                ]
             },
             {
-                "title": "Fintech Mobile App",
-                "cat": "iOS & Android",
-                "res": "500K+ downloads"
+                "id": "fabrico",
+                "title": "Fabrico",
+                "cat": "Atelier Automation",
+                "res": "Loyalty Growth +60%",
+                "fullDescription": "An application for an atelier that brings order to orders. It creates a transparent interaction environment between the client and the master: clients can at any time see the status of their orders and participate in the loyalty program, while the owner gets full control over deadlines, the work queue, and detailed reporting in one place.",
+                "challenges": [
+                    {
+                        "p": "Chaos in order records and paperwork",
+                        "s": "A single digital database of all orders with fast searching and filtering."
+                    },
+                    {
+                        "p": "Clients constantly call to find out the order status",
+                        "s": "Client's personal account, where the stage of product readiness is displayed in real time."
+                    },
+                    {
+                        "p": "Difficulty in retaining clients and lack of marketing tools",
+                        "s": "Built-in loyalty program with a system of bonuses and personal offers."
+                    },
+                    {
+                        "p": "Difficulties with controlling deadlines and masters' workload",
+                        "s": "Intelligent work queue management and automatic deadline notifications."
+                    },
+                    {
+                        "p": "Lack of understanding of real profit and business efficiency",
+                        "s": "Analytics and reporting module, showing workload, revenue, and popular services in one click."
+                    }
+                ]
             },
             {
-                "title": "Corporate Portal",
-                "cat": "Enterprise",
-                "res": "x2 performance"
+                "id": "prihlaseni",
+                "title": "Prihlaseni Portal",
+                "cat": "Social Research",
+                "res": "Data Accuracy 100%",
+                "fullDescription": "It is not just a survey app, but a tool for protecting data quality. It allows safely conducting online and offline research due to the 'one link - one answer' principle, excluding spam and distortion of results. Surveys are available via QR code without installing applications, results are recorded immediately and exported for analysis.",
+                "challenges": [
+                    {
+                        "p": "Online surveys are easy to spam and distort results",
+                        "s": "The 'one link - one answer' principle: each link leads to a unique sheet and cannot be used again."
+                    },
+                    {
+                        "p": "Survey links are unsafe when forwarded to third parties",
+                        "s": "Isolated one-time questionnaires that do not scale and do not spoil the sample even if the link is leaked."
+                    },
+                    {
+                        "p": "Difficult to conduct surveys offline (street, events)",
+                        "s": "On-the-fly QR code generation, allowing the survey to be taken without installing an application."
+                    },
+                    {
+                        "p": "Inconvenient for the respondent - need to install or register something",
+                        "s": "Web survey via QR code, just a phone camera and a browser."
+                    },
+                    {
+                        "p": "Interviewer is forced to stand nearby and wait for the survey to end",
+                        "s": "Result is recorded from the first click, even an incomplete survey gets into the database."
+                    },
+                    {
+                        "p": "Last questions in the questionnaire are massively left without answers",
+                        "s": "Randomization of the order of questions, ensuring uniform completion of the entire questionnaire."
+                    },
+                    {
+                        "p": "No flexibility in question types",
+                        "s": "Survey builder inside the application: answer options, open questions, different structures."
+                    },
+                    {
+                        "p": "Difficult to track research progress in real time",
+                        "s": "Intermediate results right in the application, without waiting for the survey to end."
+                    },
+                    {
+                        "p": "Manual data processing after collection",
+                        "s": "Export of answers to Excel for analysis, reports, and further processing."
+                    },
+                    {
+                        "p": "No backup scenario if the respondent doesn't have a phone",
+                        "s": "Possibility of filling out the survey directly through the interviewer's application on site."
+                    }
+                ]
             },
             {
-                "title": "Retail Telegram Bot",
-                "cat": "Automation",
-                "res": "10K+ users"
+                "id": "kurochki_telegram_bot",
+                "title": "Kurochki Bot",
+                "cat": "E-commerce in Telegram",
+                "res": "15k Active Users",
+                "fullDescription": "This is not just a Telegram bot for accepting orders, but a delivery operations management tool. It turns chaotic customer messages into a structured flow of orders, broken down by days, drivers, and routes. Its value is not in buttons and menus, but in predictability, planning, and reducing manual work.\n\nThe bot allows collecting orders in advance, automatically generating invoices, distributing them among delivery people, and building optimal routes without extra city driving. The driver receives a clear task checklist, and the business receives order history and data for analysis. This is a solution for those who want to manage delivery systematically, rather than collecting orders via chats and keeping everything in their head.",
+                "challenges": [
+                    {
+                        "p": "Orders come chaotically in chats and get lost",
+                        "s": "Structured order acceptance through the bot, all requests are collected in one format without manual correspondence."
+                    },
+                    {
+                        "p": "Impossible to understand the volume of orders for the day in advance",
+                        "s": "Systematization of orders by day of the week with the possibility of accumulation and planning in advance."
+                    },
+                    {
+                        "p": "Manual transfer of orders to delivery people",
+                        "s": "Automatic sending of orders to drivers at the right moment, without copying and forwarding."
+                    },
+                    {
+                        "p": "Lack of a clear action plan for the delivery day",
+                        "s": "Built-in timer and delayed sending, allowing a work plan to be prepared in advance."
+                    },
+                    {
+                        "p": "Errors when collecting orders for drivers",
+                        "s": "Automatic generation of invoices with a list of necessary goods for a specific delivery person."
+                    },
+                    {
+                        "p": "Drivers waste time moving chaotically around the city",
+                        "s": "Route optimization by geolocations, orders are built in a logical sequence."
+                    },
+                    {
+                        "p": "No control over order fulfillment by the driver",
+                        "s": "Built-in task completion checklist, each order is recorded as completed."
+                    },
+                    {
+                        "p": "Impossible to analyze past orders and workload",
+                        "s": "Storage of order history for subsequent analysis and management decisions."
+                    },
+                    {
+                        "p": "Difficult to make repeat sales and notifications to clients",
+                        "s": "Advertising and information mailing function to the client base."
+                    },
+                    {
+                        "p": "Assortment flexibility is limited by manual administration",
+                        "s": "Flexible product settings and structures inside the bot, without constant improvements."
+                    }
+                ]
             }
         ]
     },
@@ -254,7 +411,29 @@
         "terms": "Terms of Use"
     },
     "common": {
+        "back": "Back to projects",
         "step": "Step",
         "done": "Done"
+    },
+    "caseDetails": {
+        "notFound": "Project not found",
+        "backToCases": "Back to cases",
+        "analysis": "Project Analysis",
+        "concept": "Product Concept",
+        "specs": "Specifications",
+        "category": "Industry",
+        "result": "Result",
+        "security": "Security",
+        "tools": "Tools",
+        "challengesTitle": "Problem → Solution",
+        "challengesDesc": "Key project challenges and how we transformed them into effective management tools.",
+        "problem": "Problem",
+        "solution": "Our Solution",
+        "interface": "System Interface",
+        "interfaceDesc": "Process visualization",
+        "ctaTitle": "Ready to digitize your business?",
+        "ctaDesc": "We create more than just apps — we build tools for exponential growth. Let's discuss which processes in your company need automation today.",
+        "ctaPrimary": "Order a Consultation",
+        "ctaSecondary": "View Other Cases"
     }
 }
