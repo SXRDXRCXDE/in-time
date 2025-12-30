@@ -109,7 +109,7 @@ export const CtaSection = () => {
     const serviceData: Record<string, { base: number, weeks: [number, number] }> = {
       site: { base: 700, weeks: [1, 2] },
       app: { base: 2000, weeks: [3, 5] },
-      bot: { base: 700, weeks: [1, 2] },
+      bot: { base: 250, weeks: [1, 2] },
       automation: { base: 1200, weeks: [2, 3] },
       notSure: { base: 1000, weeks: [2, 3] },
     };
@@ -192,15 +192,50 @@ export const CtaSection = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setTimeout(() => {
+
+    // Рассчитываем итоговые значения перед отправкой
+    const results = calculateResult();
+
+    const payload = {
+      ...formData,
+      priceMin: results.priceMin,
+      priceMax: results.priceMax,
+      minWeeks: results.minWeeks,
+      maxWeeks: results.maxWeeks,
+      language: i18n.language
+    };
+
+    try {
+      const scriptUrl = 'https://script.google.com/macros/s/AKfycbzOPlUaV_lHS2zD0kadURfpVN67Pr3hFQYAcnQaP5VBjgkQTJw8n_jOWpZnHzQpi-Iv/exec';
+
+      console.log('Sending data to Google Sheets:', payload);
+
+      const response = await fetch(scriptUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'text/plain',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      console.log('Response status (opaque):', response.type, response);
+
       setIsSubmitted(true);
       toast({
         title: t('cta.toastTitle'),
         description: t('cta.toastDesc'),
       });
-    }, 600);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        variant: "destructive",
+        title: t('common.error', { defaultValue: 'Ошибка' }),
+        description: t('cta.errorDesc', { defaultValue: 'Не удалось отправить данные. Попробуйте еще раз.' }),
+      });
+    }
   };
 
   const resetForm = () => {

@@ -80,6 +80,12 @@ export const Header = () => {
           <motion.div whileHover={{ scale: 1.02 }}>
             <Link
               to="/"
+              onClick={(e) => {
+                if (pathname === '/') {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              }}
               className="flex items-center gap-3"
             >
               <img src={theme === "light" ? lightLogo : logo} alt="In Time" className="h-10 w-auto" />

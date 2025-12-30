@@ -11,7 +11,7 @@ import { getFirstProjectImage } from "@/imagesData/imagesData";
 
 const CasesPage = () => {
     const { t } = useTranslation();
-    const cases = t('cases.items', { returnObjects: true }) as Array<{ id: string, title: string, cat: string, res: string }>;
+    const cases = t('cases.items', { returnObjects: true }) as Array<{ id: string, title: string, cat: string, res: string, fullDescription: string }>;
 
     return (
         <div className="min-h-screen text-foreground">
@@ -48,11 +48,11 @@ const CasesPage = () => {
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
                                 className="group flex flex-col gap-6"
                             >
-                                <Link to={`/cases/${caseItem.id}`} className="relative block overflow-hidden rounded-3xl aspect-[16/10]">
+                                <Link to={`/cases/${caseItem.id}`} className="relative block overflow-hidden rounded-3xl aspect-square">
                                     <img
                                         src={getFirstProjectImage(caseItem.id)}
                                         alt={caseItem.title}
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
 
@@ -76,8 +76,8 @@ const CasesPage = () => {
                                 </Link>
 
                                 <div className="flex justify-between items-start px-2">
-                                    <p className="text-muted-foreground max-w-md">
-                                        {t('services.items', { returnObjects: true })[index % 3].desc}
+                                    <p className="text-muted-foreground max-w-md line-clamp-2">
+                                        {caseItem.fullDescription?.split('. ')[0]}...
                                     </p>
                                     <Button asChild variant="ghost" className="group/btn hover:bg-transparent">
                                         <Link to={`/cases/${caseItem.id}`} className="flex items-center gap-2">

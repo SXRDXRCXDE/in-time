@@ -120,7 +120,7 @@
             },
             {
                 "id": "prihlaseni",
-                "title": "Prihlaseni Portal",
+                "title": "Questionnaire Portal",
                 "cat": "Social Research",
                 "res": "Data Accuracy 100%",
                 "fullDescription": "It is not just a survey app, but a tool for protecting data quality. It allows safely conducting online and offline research due to the 'one link - one answer' principle, excluding spam and distortion of results. Surveys are available via QR code without installing applications, results are recorded immediately and exported for analysis.",
@@ -171,7 +171,7 @@
                 "id": "kurochki_telegram_bot",
                 "title": "Kurochki Bot",
                 "cat": "E-commerce in Telegram",
-                "res": "15k Active Users",
+                "res": "1.5k Active Users",
                 "fullDescription": "This is not just a Telegram bot for accepting orders, but a delivery operations management tool. It turns chaotic customer messages into a structured flow of orders, broken down by days, drivers, and routes. Its value is not in buttons and menus, but in predictability, planning, and reducing manual work.\n\nThe bot allows collecting orders in advance, automatically generating invoices, distributing them among delivery people, and building optimal routes without extra city driving. The driver receives a clear task checklist, and the business receives order history and data for analysis. This is a solution for those who want to manage delivery systematically, rather than collecting orders via chats and keeping everything in their head.",
                 "challenges": [
                     {
@@ -433,7 +433,7 @@
         "interfaceDesc": "Process visualization",
         "ctaTitle": "Ready to digitize your business?",
         "ctaDesc": "We create more than just apps — we build tools for exponential growth. Let's discuss which processes in your company need automation today.",
-        "ctaPrimary": "Order a Consultation",
+        "ctaPrimary": "Free Consultation",
         "ctaSecondary": "View Other Cases"
     }
 }

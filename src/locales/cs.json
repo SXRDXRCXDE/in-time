@@ -120,7 +120,7 @@
             },
             {
                 "id": "prihlaseni",
-                "title": "Prihlaseni Portal",
+                "title": "Dotazník",
                 "cat": "Sociální výzkum",
                 "res": "Přesnost dat 100%",
                 "fullDescription": "Není to jen dotazníková aplikace, ale nástroj pro ochranu kvality dat. Umožňuje bezpečně provádět online i offline výzkumy díky principu 'jeden odkaz - jedna odpověď', který vylučuje spam a zkreslení výsledků. Průzkumy jsou dostupné přes QR kód bez instalace aplikací, výsledky se zaznamenávají okamžitě a exportují k analýze.",
@@ -171,7 +171,7 @@
                 "id": "kurochki_telegram_bot",
                 "title": "Kurochki Bot",
                 "cat": "E-commerce v Telegramu",
-                "res": "15k Aktivních uživatelů",
+                "res": "1.5k Aktivních uživatelů",
                 "fullDescription": "Není to jen Telegram bot pro přijímání objednávek, ale nástroj pro řízení operací doručení. Proměňuje chaotické zprávy zákazníků v strukturovaný tok objednávek, rozdělený podle dnů, řidičů a tras. Jeho hodnota nespočívá v tlačítkách a menu, ale v předvídatelnosti, plánování a omezení manuální práce.\n\nBot umožňuje sbírat objednávky předem, automaticky generovat faktury, distribuovat je mezi doručovatele a sestavovat optimální trasy bez zbytečného ježdění po městě. Řidič obdrží jasný seznam úkolů a firma získá historii objednávek a data pro analýzu. Je to řešení pro ty, kteří chtějí řídit doručení systémově, nikoliv sbírat objednávky přes chaty a vše držet v hlavě.",
                 "challenges": [
                     {
@@ -425,7 +425,7 @@
         "interfaceDesc": "Vizualizace pracovních procesů",
         "ctaTitle": "Jste připraveni digitalizovat svůj podnik?",
         "ctaDesc": "Vytváříme víc než jen aplikace – budujeme nástroje pro exponenciální růst. Pojďme probrat, které procesy ve vaší společnosti potřebují automatizaci již dnes.",
-        "ctaPrimary": "Objednat konzultaci",
+        "ctaPrimary": "Konzultace zdarma",
         "ctaSecondary": "Zobrazit další projekty"
     }
 }

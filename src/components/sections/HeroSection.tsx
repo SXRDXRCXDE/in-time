@@ -132,7 +132,7 @@ export const HeroSection = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
-              onClick={() => window.scrollTo({ top: document.getElementById('reviews')?.offsetTop || 0 })}
+              onClick={() => window.scrollTo({ top: document.getElementById('cases')?.offsetTop || 0, behavior: 'smooth' })}
               variant="heroOutline"
               className="h-12 sm:h-14 px-6 sm:px-10 text-base sm:text-lg rounded-xl w-full sm:w-auto"
             >

@@ -108,11 +108,11 @@ export const CasesSection = () => {
             {cases.map((caseItem, index) => (
               <SwiperSlide key={caseItem.id} className="h-auto">
                 <div className="group relative flex flex-col gap-4 h-full">
-                  <Link to={`/cases/${caseItem.id}`} className="relative overflow-hidden rounded-2xl cursor-pointer aspect-[4/3] block">
+                  <Link to={`/cases/${caseItem.id}`} className="relative overflow-hidden rounded-2xl cursor-pointer aspect-square block">
                     <img
                       src={getFirstProjectImage(caseItem.id)}
                       alt={caseItem.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />

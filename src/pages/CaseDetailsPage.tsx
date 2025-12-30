@@ -116,21 +116,7 @@ const CaseDetailsPage = () => {
                         </div>
                     </motion.div>
 
-                    {/* Hero Banner */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                        className="relative rounded-[2.5rem] overflow-hidden aspect-[21/9] mb-32 border border-foreground/10 group shadow-2xl cursor-zoom-in"
-                        onClick={() => setSelectedImage(heroImage)}
-                    >
-                        <img
-                            src={heroImage}
-                            alt={caseItem.title}
-                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.02]"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
-                    </motion.div>
+
 
                     {/* Intro Section */}
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-40">
@@ -145,6 +131,9 @@ const CaseDetailsPage = () => {
 
                         <div className="lg:col-span-4 lg:pl-12">
                             <div className="p-8 rounded-3xl bg-foreground/5 border border-foreground/10 sticky top-32">
+                                <div className="mb-8 aspect-square rounded-2xl overflow-hidden border border-foreground/10 group cursor-zoom-in" onClick={() => setSelectedImage(heroImage)}>
+                                    <img src={heroImage} alt={caseItem.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                </div>
                                 <h3 className="text-lg font-medium mb-8">{t('caseDetails.specs')}</h3>
                                 <ul className="space-y-6">
                                     <li className="flex items-start gap-4">
@@ -176,16 +165,7 @@ const CaseDetailsPage = () => {
                                     </li>
                                 </ul>
 
-                                <hr className="my-8 border-foreground/10" />
 
-                                <h3 className="text-sm font-medium mb-4 uppercase tracking-wider text-muted-foreground">{t('caseDetails.tools')}</h3>
-                                <div className="flex flex-wrap gap-2">
-                                    {['React', 'Node.js', 'PostgreSQL', '1C Integration', 'Telegram API'].map(tech => (
-                                        <span key={tech} className="px-3 py-1 rounded-lg bg-background border border-foreground/10 text-xs">
-                                            {tech}
-                                        </span>
-                                    ))}
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -237,8 +217,8 @@ const CaseDetailsPage = () => {
                             <p className="text-muted-foreground hidden md:block">{t('caseDetails.interfaceDesc')}</p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[400px]">
-                            {images.map((img, i) => (
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {images.slice(1).map((img, i) => (
                                 <motion.div
                                     key={i}
                                     initial={{ opacity: 0, y: 20 }}
@@ -246,10 +226,7 @@ const CaseDetailsPage = () => {
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.1 }}
                                     onClick={() => setSelectedImage(img)}
-                                    className={`relative rounded-3xl overflow-hidden border border-foreground/10 group cursor-zoom-in ${i === 0 ? "md:col-span-2 lg:col-span-2 row-span-1" :
-                                        i === 1 ? "md:row-span-1" :
-                                            "md:col-span-1"
-                                        }`}
+                                    className="relative rounded-3xl overflow-hidden border border-foreground/10 group cursor-zoom-in aspect-[9/16]"
                                 >
                                     <img
                                         src={img}
