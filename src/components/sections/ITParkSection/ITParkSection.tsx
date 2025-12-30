@@ -69,7 +69,7 @@ export const ITParkSection = () => {
                             </DialogTrigger>
                             <DialogContent className="max-w-4xl p-0 overflow-hidden bg-transparent border-none">
                                 <img
-                                    src="/it-park-certificate.png"
+                                    src="/public/it-park-certificate.png"
                                     alt="IT Park Certificate"
                                     className="w-full h-auto rounded-lg shadow-2xl"
                                 />
@@ -116,7 +116,7 @@ export const ITParkSection = () => {
                                     </DialogTrigger>
                                     <DialogContent className="max-w-4xl p-0 overflow-hidden bg-transparent border-none">
                                         <img
-                                            src="/it-park-certificate.png"
+                                            src="/public/it-park-certificate.png"
                                             alt="IT Park Certificate"
                                             className="w-full h-auto rounded-lg shadow-2xl"
                                         />
