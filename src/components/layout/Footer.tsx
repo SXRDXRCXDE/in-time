@@ -33,9 +33,9 @@ export const Footer = () => {
   ];
 
   const socialLinks = [
-    { label: "Telegram", href: "https://t.me/intime_studio" },
-    { label: "LinkedIn", href: "#" },
-    { label: "Instagram", href: "#" },
+    { label: "Telegram", href: "https://t.me/violin34" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/bohdan-rassovskiy-05a910283" },
+    { label: "Instagram", href: "https://www.instagram.com/in.time.dev?igsh=czE3cm5nOTFqMGgy&utm_source=qr" },
   ];
 
   return (
