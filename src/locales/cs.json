@@ -12,7 +12,7 @@
         "title1": "Proměňujeme chaos",
         "title2": "ve funkční",
         "title3": "digitální systém",
-        "description": "Pro malé a střední podniky: rychle navrhujeme a spouštíme web, aplikaci a bota, které optimalizují práci a zvyšují produktivitu.",
+        "description": "Pro malé a střední podniky: rychle navrhujeme a spouštíme digitální produkty (weby, aplikace a chatboty), které optimalizují práci a zvyšují produktivitu.",
         "ctaPrimary": "Spočítat cenu online",
         "ctaSecondary": "Podívejte se, jak optimalizujeme podnikání"
     },
@@ -232,11 +232,11 @@
             },
             {
                 "title": "Mezinárodní zkušenost",
-                "desc": "Spolupracujeme s týmy a klienty z různých zemí: Evropy, Izraele a zemí SNS. Rozumíme rozdílům v trzích, mentalitě a očekáváních uživatelů — a zohledňujeme to v designu, logice produktu a komunikaci."
+                "desc": "Spolupracujeme s týmy a klienty z Evropy, Izraele a zemí SNS. Rozumíme rozdílům v trzích, mentalitě a očekáváních uživatelů — a zohledňujeme to v designu, logice produktu a komunikaci."
             },
             {
                 "title": "Pro koho se hodíme",
-                "desc": "• Malé a střední podniky\n• Startupy ve fázi MVP\n• Firmy, které potřebují rychle spustit a otestovat řešení\n• Ti, kteří chtějí automatizovat procesy, nikoliv jen „hezký web“"
+                "desc": "• Malé a střední podniky\n• Startupy ve fázi MVP\n• Firmy, které potřebují rychle spustit a otestovat řešení\n• Ti, kteří chtějí automatizovat procesy, nikoliv jen hezký web bez funkce"
             },
             {
                 "title": "Pro koho se nehodíme",
@@ -258,7 +258,7 @@
             },
             {
                 "title": "Design",
-                "desc": "Vytváření prototypů a UI designu. Schvalování každé obrazovky."
+                "desc": "Vytváření prototypů a UI/UX designu. Schvalování každé obrazovky"
             },
             {
                 "title": "Vývoj",
@@ -383,7 +383,7 @@
     "itpark": {
         "tag": "Rezident",
         "title": "Rezident IT Park Uzbekistan",
-        "desc": "In Time is oficiálním rezidentem technologického parku softwarových produktů a informačních technologií (IT Park). To potvrzuje náš status spolehlivého IT partnera, který splňuje mezinárodní standardy kvality a transparentnosti podnikání.",
+        "desc": "In Time je oficiálním rezidentem technologického parku softwarových produktů a informačních technologií (IT Park). To potvrzuje náš status spolehlivého IT partnera, který splňuje mezinárodní standardy kvality a transparentnosti podnikání.",
         "button": "Zobrazit certifikát",
         "status": "Oficiální status",
         "quality": "Standardy kvality",

@@ -12,9 +12,9 @@
         "title1": "Turning chaos",
         "title2": "into a working",
         "title3": "digital system",
-        "description": "For small and medium businesses: we quickly design and launch a website, app, and bot that optimize work and increase productivity.",
-        "ctaPrimary": "Calculate price online",
-        "ctaSecondary": "See how we optimize business"
+        "description": "For small and medium businesses: we quickly design and launch websites, apps, and bots that streamline operations and increase productivity",
+        "ctaPrimary": "Get an estimated price",
+        "ctaSecondary": "See how we improve business efficiency"
     },
     "services": {
         "tag": "Services",
@@ -22,11 +22,11 @@
         "items": [
             {
                 "title": "Websites",
-                "desc": "Corporate sites, landings and online stores with modern design and fast loading"
+                "desc": "Corporate sites, landing pages and online stores with modern design and fast loading"
             },
             {
                 "title": "Apps",
-                "desc": "Mobile and web applications for iOS, Android and browsers with intuitive interface"
+                "desc": "Mobile and web applications for iOS, Android and browsers with an intuitive interface"
             },
             {
                 "title": "Chatbots",
@@ -228,7 +228,7 @@
             },
             {
                 "title": "Transparent communication",
-                "desc": "Daily updates, access to task tracker and direct contact with the development team."
+                "desc": "Daily updates, access to a task tracker and direct contact with the development team."
             },
             {
                 "title": "Quality guarantee",
@@ -244,7 +244,7 @@
             },
             {
                 "title": "Who we are for",
-                "desc": "• Small and medium businesses\n• Startups at the MVP stage\n• Companies that need to quickly launch and test a solution\n• Those who want to automate processes, not just a \"beautiful site\""
+                "desc": "• Small and medium businesses\n• Startups at the MVP stage\n• Companies that need to quickly launch and test a solution\n• Those who want to automate processes, not just a \"website for show\""
             },
             {
                 "title": "Who we are not for",
@@ -310,7 +310,7 @@
         "subtitle": "Answer a few questions — we will show you an estimated cost and timeline. No obligations.",
         "steps": {
             "step1": {
-                "question": "What of you want to do?",
+                "question": "What do you want to do?",
                 "subtitle": "You can select \"not sure\" — we will help define the format.",
                 "options": {
                     "site": "Website",

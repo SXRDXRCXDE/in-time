@@ -27,7 +27,7 @@ export const Header = () => {
 
   const languages = [
     { code: "ru", label: "Ru" },
-    { code: "cs", label: "Cs" },
+    { code: "cs", label: "Cz" },
     { code: "en", label: "En" },
     { code: "he", label: "He" },
   ];
