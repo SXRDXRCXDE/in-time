@@ -1,0 +1,465 @@
+{
+    "nav": {
+        "services": "Služby",
+        "cases": "Projekty",
+        "process": "Proces",
+        "reviews": "Recenze",
+        "about": "O nás",
+        "contact": "Probrat projekt",
+        "more": "Více",
+        "blog": "Blog",
+        "crm": "CRM",
+        "chatbots": "Chatboti",
+        "webDevelopment": "Weby",
+        "webAppDevelopment": "Webové aplikace",
+        "websiteCost": "Ceník"
+    },
+    "hero": {
+        "studio": "Digitální studio",
+        "title1": "CRM systémy, aplikace a weby na míru",
+        "title2": "pro malé a střední",
+        "title3": "firmy",
+        "title1_app": "Aplikace na míru navržené",
+        "title2_app": "přesně pro váš",
+        "title3_app": "byznys",
+        "title1_crm": "CRM systém na míru, postavený",
+        "title2_crm": "podle vašich",
+        "title3_crm": "procesů",
+        "title1_web": "Web na míru, který funguje pro váš byznys",
+        "title2_web": "ne jen jako",
+        "title3_web": "vizitka",
+        "title1_landing": "Lowcost landing",
+        "title2_landing": "pro rychlý",
+        "title3_landing": "start",
+        "description": "Proměňujeme chaos ve funkční digitální systém",
+        "description_app": "Vyvíjíme aplikace, které lze rychle spustit a dlouhodobě rozvíjet.",
+        "description_crm": "Navrhujeme CRM systémy přesně podle vašich interních procesů.",
+        "description_web": "Firemní weby na míru, které posilují důvěru a podporují konverze.",
+        "description_landing": "Statická prezentace bez zbytečných funkcí a složité správy.",
+        "ctaPrimary": "Spočítat cenu online",
+        "ctaSecondary": "Podívejte se, jak optimalizujeme podnikání"
+    },
+    "services": {
+        "tag": "Služby",
+        "title": "Kompletní cyklus vývoje digitálních produktů",
+        "items": [
+            {
+                "title": "CRM systémy",
+                "desc": "CRM systémy na míru pro řízení zákazníků, objednávek a interních procesů.\nAutomatizujeme prodej, podporu i administrativu — vše v jednom přehledném systému, přizpůsobeném vašemu podnikání.\nOd 25000 Kč."
+            },
+            {
+                "title": "Weby",
+                "desc": "Firemní weby a e-shopy s moderním designem a rychlým načítáním.\nOd 10000 Kč."
+            },
+            {
+                "title": "Aplikace",
+                "desc": "Mobilní a webové aplikace pro iOS, Android a prohlížeče s intuitivním rozhraním.\nOd 30000 Kč."
+            },
+            {
+                "title": "Landing (bez backendu)",
+                "desc": "Rychlá a jednoduchá prezentace bez databází a administrace.\nSpuštění během několika dnů.\nOd 3000 Kč."
+            }
+        ]
+    },
+    "cases": {
+        "tag": "Projekty",
+        "title": "Jak řešíme úkoly",
+        "button": "Všechny projekty",
+        "more": "Více informací",
+        "items": [
+            {
+                "id": "e-agent",
+                "title": "E-Agent",
+                "cat": "Automatizace distribuce",
+                "res": "Výkonný CRM systém",
+                "fullDescription": "E-Agent není jen nástroj pro objednávání. Je to operační systém pro distribuční firmu. Propojuje výrobce, obchody, sklady, řidiče a účetnictví do jednoho řízeného okruhu. Jeho hodnota nespočívá v 'hezkém rozhraní', ale v kontrole procesů, eliminaci manuálního chaosu a schopnosti škálovat bez ztráty kontroly.\n\nE-Agent proměňuje roztříštěné hovory, chaty a tabulky v transparentní systém: s jasnými skladovými zůstatky, fixními akcemi personálu, flexibilními cenami a předvídatelnou logistikou. Je to produkt pro ty, kteří chtějí řídit distribuci jako systém, namísto každodenního hašení operativních požárů.",
+                "challenges": [
+                    {
+                        "p": "Roztříštěná komunikace mezi prodejcem, výrobcem, skladem a řidičem",
+                        "s": "Jednotné pracovní prostředí, kde všichni účastníci pracují v jednom okruhu: objednávky, faktury, stavy, historie akcí."
+                    },
+                    {
+                        "p": "Chyby a ztráty kvůli manuálnímu objednávání (WhatsApp, hovory, Excel)",
+                        "s": "Standardized ordering in the app in a few clicks, without interpretations and 'human factor'."
+                    },
+                    {
+                        "p": "Absence transparentní kontroly skladových zásob",
+                        "s": "Online sledování zásob se synchronizací mezi skladem, řidiči a obchody."
+                    },
+                    {
+                        "p": "Pomalý a chybový příjem zboží ve skladu",
+                        "s": "Skenování čárových kódů pomocí kamery, okamžité přidání a ověření zboží bez ručního vyhledávání."
+                    },
+                    {
+                        "p": "Řidiči ztrácejí čas, pletou si objednávky a zákazníky",
+                        "s": "Samostatné rozhraní pro řidiče: mapa, seznam objednávek, zákazníci, geovyhledávání, skladové zásoby, kalkulačka dluhů."
+                    },
+                    {
+                        "p": "Chybějící kontrola nad činností personálu",
+                        "s": "Protokol aktivit a model přístupu založený na rolích: viditelnost toho, kdo co udělal, s možností omezit konkrétní funkce."
+                    },
+                    {
+                        "p": "Potíže s prací s různými typy zákazníků (soukromníci, obchody, restaurace, velkoobchod)",
+                        "s": "Flexibilní cenový systém umožňující neomezené cenové kategorie pro různé typy spotřebitelů."
+                    },
+                    {
+                        "p": "Mezera mezi operativou a účetnictvím",
+                        "s": "Integrace s chatboty, kteří automaticky odesílají objednávky a změny do účetních a skladových kanálů."
+                    },
+                    {
+                        "p": "Manuální práce s Excelem a 1C, duplikace dat",
+                        "s": "Obousměrná integrace s Excelem a 1C: příjem zboží, export reportů, generování faktur pro řidiče."
+                    },
+                    {
+                        "p": "Absence škálovatelného distribučního systému pro výrobce",
+                        "s": "E-Agent jako distribuční platforma kombinující správu produktů, objednávek, logistiky a zúčtování v jednom nástroji."
+                    }
+                ]
+            },
+            {
+                "id": "fabrico",
+                "title": "Fabrico",
+                "cat": "Automatizace ateliéru",
+                "res": "Malý CRM na míru",
+                "fullDescription": "Aplikace pro ateliér, která vnáší řád do objednávek. Vytváří transparentní prostředí pro interakci mezi klientem a mistrem: klienti mohou kdykoli vidět stav svých objednávek a účastnit se věrnostního programu, zatímco majitel získává plnou kontrolu nad termíny, frontou prací a detailním reportováním na jednom místě.",
+                "challenges": [
+                    {
+                        "p": "Chaos v evidenci objednávek a papírování",
+                        "s": "Jednotná digitální databáze všech objednávek s rychlým vyhledáváním a filtrováním."
+                    },
+                    {
+                        "p": "Klienti neustále volají, aby zjistili stav objednávky",
+                        "s": "Osobní účet klienta, kde se v reálném čase zobrazuje fáze připravenosti produktu."
+                    },
+                    {
+                        "p": "Potíže s udržením klientů a nedostatek marketingových nástrojů",
+                        "s": "Vestavěný věrnostní program se systémem bonusů a osobních nabídek."
+                    },
+                    {
+                        "p": "Problémy s kontrolou termínů a vytížením mistrů",
+                        "s": "Inteligentní řízení fronty prací a automatická upozornění na termíny."
+                    },
+                    {
+                        "p": "Nepochopení reálného zisku a efektivity podnikání",
+                        "s": "Modul analýzy a reportování, ukazující vytížení, tržby a oblíbené služby na jedno kliknutí."
+                    }
+                ]
+            },
+            {
+                "id": "prihlaseni",
+                "title": "Dotazník",
+                "cat": "Sociální výzkum",
+                "res": "Univerzální dotazník",
+                "fullDescription": "Není to jen dotazníková aplikace, ale nástroj pro ochranu kvality dat. Umožňuje bezpečně provádět online i offline výzkumy díky principu 'jeden odkaz - jedna odpověď', který vylučuje spam a zkreslení výsledků. Průzkumy jsou dostupné přes QR kód bez instalace aplikací, výsledky se zaznamenávají okamžitě a exportují k analýze.",
+                "challenges": [
+                    {
+                        "p": "Online dotazníky lze snadno zaspamovat a zkreslit výsledky",
+                        "s": "Princip 'jeden odkaz - jedna odpověď': každý odkaz vede k unikátnímu listu a nelze jej použít znovu."
+                    },
+                    {
+                        "p": "Odkazy na dotazníky jsou nebezpečné při přeposílání třetím osobám",
+                        "s": "Izolované jednorázové dotazníky, které se neškálují a nekazí vzorek ani v případě úniku odkazu."
+                    },
+                    {
+                        "p": "Obtížné provádění průzkumů offline (ulice, akce)",
+                        "s": "Generování QR kódu za běhu, umožňující vyplnění dotazníku bez instalace aplikace."
+                    },
+                    {
+                        "p": "Nepohodlné pro respondenta - nutnost něco instalovat nebo registrovat",
+                        "s": "Webový průzkum přes QR kód, stačí fotoaparát telefonu a prohlížeč."
+                    },
+                    {
+                        "p": "Tazatel je nucen stát poblíž a čekat na konec dotazníku",
+                        "s": "Výsledek se zaznamenává od prvního kliknutí, do databáze se dostane i nedokončený dotazník."
+                    },
+                    {
+                        "p": "Poslední otázky v dotazníku zůstávají hromadně bez odpovědí",
+                        "s": "Randomizace pořadí otázek zajišťující rovnoměrné vyplnění celého dotazníku."
+                    },
+                    {
+                        "p": "Žádná flexibilita v typech otázek",
+                        "s": "Tvůrce dotazníků uvnitř aplikace: možnosti odpovědí, otevřené otázky, různé struktury."
+                    },
+                    {
+                        "p": "Obtížné sledování průběhu výzkumu v reálném čase",
+                        "s": "Průběžné výsledky přímo v aplikaci bez čekání na ukončení průzkumu."
+                    },
+                    {
+                        "p": "Manuální zpracování dat po sběru",
+                        "s": "Export odpovědí do Excelu pro analýzu, reporty a další zpracování."
+                    },
+                    {
+                        "p": "Žádný záložní scénář, pokud respondent nemá telefon",
+                        "s": "Možnost vyplnění dotazníku přímo přes aplikaci tazatele na místě."
+                    }
+                ]
+            },
+            {
+                "id": "kurochki_telegram_bot",
+                "title": "Kurochki Bot",
+                "cat": "E-commerce v Telegramu",
+                "res": "Obchodní chatbot",
+                "fullDescription": "Není to jen Telegram bot pro přijímání objednávek, ale nástroj pro řízení operací doručení. Proměňuje chaotické zprávy zákazníků v strukturovaný tok objednávek, rozdělený podle dnů, řidičů a tras. Jeho hodnota nespočívá v tlačítkách a menu, ale v předvídatelnosti, plánování a omezení manuální práce.\n\nBot umožňuje sbírat objednávky předem, automaticky generovat faktury, distribuovat je mezi doručovatele a sestavovat optimální trasy bez zbytečného ježdění po městě. Řidič obdrží jasný seznam úkolů a firma získá historii objednávek a data pro analýzu. Je to řešení pro ty, kteří chtějí řídit doručení systémově, nikoliv sbírat objednávky přes chaty a vše držet v hlavě.",
+                "challenges": [
+                    {
+                        "p": "Objednávky přicházejí chaoticky v chatech a ztrázejí se",
+                        "s": "Strukturovaný příjem objednávek přes bota, všechny požadavky jsou shromažďovány v jednom formátu bez ruční korespondence."
+                    },
+                    {
+                        "p": "Nemožné předem pochopit objem objednávek na den",
+                        "s": "Systematizace objednávek podle dnů v týdnu s možností akumulace a plánování předem."
+                    },
+                    {
+                        "p": "Manuální předávání objednávek doručovatelům",
+                        "s": "Automatické odesílání objednávek řidičům ve správný okamžik, bez kopírování a přeposílání."
+                    },
+                    {
+                        "p": "Absence jasného akčního plánu pro den doručení",
+                        "s": "Vestavěný časovač a odložené odesílání, umožňující připravit pracovní plán předem."
+                    },
+                    {
+                        "p": "Chyby při shromažďování objednávek pro řidiče",
+                        "s": "Automatické generování faktur se seznamem potřebného zboží pro konkrétního doručovatele."
+                    },
+                    {
+                        "p": "Řidiči ztrácejí čas chaotickým pohybem po městě",
+                        "s": "Optimalizace trasy podle geolokací, objednávky jsou sestaveny v logickém pořadí."
+                    },
+                    {
+                        "p": "Žádná kontrola nad plněním objednávek řidičem",
+                        "s": "Vestavěný seznam úkolů, každá objednávka je zaznamenána jako splněná."
+                    },
+                    {
+                        "p": "Nemožné analyzovat minulé objednávky a vytížení",
+                        "s": "Ukládání historie objednávek pro následnou analýzu a manažerská rozhodnutí."
+                    },
+                    {
+                        "p": "Obtížné provádění opakovaných prodejů a oznámení klientům",
+                        "s": "Funkce reklamního a informačního rozesílání na základnu klientů."
+                    },
+                    {
+                        "p": "Flexibilita sortimentu je omezena manuální správou",
+                        "s": "Flexibilní nastavení produktů a struktur uvnitř bota bez neustálého vylepšování."
+                    }
+                ]
+            }
+        ]
+    },
+    "advantages": {
+        "tag": "Proč my",
+        "title": "Důvody, proč s námi spolupracovat",
+        "items": [
+            {
+                "title": "Rychlý vývoj",
+                "desc": "MVP spouštíme za méně než týden. Agile přístup nám umožňuje rychle se přizpůsobit změnám."
+            },
+            {
+                "title": "Transparentní komunikace",
+                "desc": "Denní aktualizace, neustálý kontakt s námi ve všech fázích vývoje."
+            },
+            {
+                "title": "Mezinárodní zkušenost",
+                "desc": "Spolupracujeme s týmy a klienty z Evropy, Izraele a zemí SNS. Rozumíme rozdílům v trzích, mentalitě a očekáváních uživatelů — a zohledňujeme to v designu, logice produktu a komunikaci."
+            },
+            {
+                "title": "Pro koho se hodíme",
+                "desc": "• Malé a střední podniky\n• Startupy ve fázi MVP\n• Firmy, které potřebují rychle spustit a otestovat řešení\n• Ti, kteří chtějí automatizovat procesy"
+            },
+            {
+                "title": "Pro koho se nehodíme",
+                "desc": "• Korporace s dlouhými tendry a složitou byrokracií\n"
+            }
+        ]
+    },
+    "process": {
+        "tag": "Proces",
+        "title": "Jak pracujeme",
+        "steps": [
+            {
+                "title": "Konzultace",
+                "desc": "Prodiskutujeme váš nápad, cíle a požadavky. Formujeme vizi produktu."
+            },
+            {
+                "title": "Analytika",
+                "desc": "Průzkum trhu, konkurence a cílového publika. Příprava zadání."
+            },
+            {
+                "title": "Design",
+                "desc": "Vytváření prototypů a UI/UX designu. Schvalování každé obrazovky"
+            },
+            {
+                "title": "Vývoj",
+                "desc": "Psaní čistého kódu, provádění code review a testování."
+            },
+            {
+                "title": "Spuštění",
+                "desc": "Nasazení projektu, nastavení analytiky a monitoringu."
+            },
+            {
+                "title": "Podpora",
+                "desc": "Rozvoj produktu, přidávání nových funkcí a optimalizace."
+            }
+        ]
+    },
+    "testimonials": {
+        "tag": "Recenze",
+        "title": "Co říkají klienti",
+        "trust": "Důvěřují nám",
+        "items": [
+            {
+                "quote": "Tým předčil všechna naše očekávání. Projekt byl dokončen včas a výsledek předčil naše KPI o 200%.",
+                "author": "Azizbek Rahimov",
+                "role": "CEO, KAY-KAY"
+            },
+            {
+                "quote": "Profesionální přístup ke každému detailu. Skvělá komunikace a ochota vyjít vstříc. Doporučuji!",
+                "author": "Nigora Saidova",
+                "role": "Product Manager, Amadeus"
+            },
+            {
+                "quote": "Třetí projekt s tímto týmem. Vždy kvalita, vždy včas. Spolehliví partneři pro dlouhodobou spolupráci.",
+                "author": "Shoxrux Karimov",
+                "role": "Founder, SOLOD-EXPO"
+            }
+        ]
+    },
+    "cta": {
+        "title": "Zjistit orientační cenu bez závazků",
+        "titleSpan": " za 30 sekund",
+        "subtitle": "Odpovězte na několik otázek — ukážeme vám orientační cenu a termíny. Nezávazně.",
+        "steps": {
+            "step1": {
+                "question": "Co chcete udělat?",
+                "subtitle": "Můžete zvolit „nejsem si jist“ — pomůžeme vám určit formát.",
+                "options": {
+                    "site": "Web",
+                    "app": "Aplikace",
+                    "bot": "Bot",
+                    "automation": "CRM systém",
+                    "notSure": "Nejsem si jistý"
+                }
+            },
+            "step2": {
+                "question": "Cíl projektu",
+                "subtitle": "Vyberte hlavní úkol — detaily upřesníme později.",
+                "options": {
+                    "mvp": "MVP",
+                    "sales": "Prodej",
+                    "internal": "Vnitřní nástroj",
+                    "support": "Zákaznická podpora",
+                    "scaling": "Škálování"
+                }
+            },
+            "step3": {
+                "question": "Odhadovaný rozsah",
+                "subtitle": "Pokud váháte, zvolte střední variantu.",
+                "options": {
+                    "simple": "Jednoduchý (landing / základní bot)",
+                    "medium": "Střední",
+                    "complex": "Složitý / vlastní"
+                }
+            },
+            "step4": {
+                "question": "Budget",
+                "subtitle": "Budget nám pomáhá pochopit vaše očekávání a navrhnout optimální variantu.",
+                "options": {
+                    "under500": "do €500",
+                    "500-1000": "€500-1000",
+                    "1000-3000": "€1,000–3,000",
+                    "3000-7000": "€3,000–7,000",
+                    "dontKnow": "zatím nevím"
+                }
+            },
+            "step5": {
+                "question": "Termín",
+                "subtitle": "Urgentní projekty vyžadují vyhrazený tým.",
+                "options": {
+                    "urgent": "urgentní",
+                    "1-2months": "1–2 měsíce",
+                    "noDeadline": "žádný přísný termín"
+                }
+            },
+            "step6": {
+                "question": "Kontaktní údaje",
+                "name": "Jméno",
+                "namePlaceholder": "Vaše jméno",
+                "email": "Email",
+                "emailPlaceholder": "example@mail.com",
+                "ctaTitle": "Získáte orientační cenu, návrh řešení a časový odhad realizace."
+            }
+        },
+        "result": {
+            "title": "Výsledek výpočtu",
+            "estimation": "Odhad projektu",
+            "timeline": "Termín realizace",
+            "weeks": "týdnů",
+            "weeksRange": "{{min}}–{{max}} {{unit}}",
+            "priceRange": "{{min}} – {{max}} €",
+            "disclaimer": "Odhad je vytvořen na základě vašich odpovědí a odráží typický rozsah prací pro podobné projekty.",
+            "toContact": "Přejít k diskusi",
+            "liveEstimate": "Živý odhad"
+        },
+        "calculating": "Analyzujeme parametry...",
+        "next": "Další",
+        "back": "Zpět",
+        "submit": "Odeslat",
+        "response": "Rychlá reakce – obvykle do 2 hodin",
+        "toastTitle": "Žádost odeslána!",
+        "toastDesc": "Brzy vás budeme kontaktovat."
+    },
+    "thankYou": {
+        "title": "Žádost odeslána!",
+        "description": "Obdrželi jsme vaši zprávu a brzy vás budeme kontaktovat. Náš tým již pracuje na vaší žádosti.",
+        "backToHome": "Zpět na hlavní stránku",
+        "goBack": "Zpět",
+        "responseTime": "Obvykle odpovídáme do 24 hodin"
+    },
+    "itpark": {
+        "tag": "Rezident",
+        "title": "Rezident IT Park Uzbekistan",
+        "desc": "In Time je oficiálním rezidentem technologického parku softwarových produktů a informačních technologií (IT Park). To potvrzuje náš status spolehlivého IT partnera, který splňuje mezinárodní standardy kvality a transparentnosti podnikání.",
+        "button": "Zobrazit certifikát",
+        "status": "Oficiální status",
+        "quality": "Standardy kvality",
+        "clickToEnlarge": "Kliknutím zvětšíte",
+        "verified": "Ověřeno",
+        "residentYear": "Rezident 2025",
+        "visitWebsite": "Navštívit web",
+        "websiteDesc": "Dozvědět se více o IT Parku a programu Outsourcing v Uzbekistánu."
+    },
+    "footer": {
+        "desc": "Vytváříme digitální produkty, které pomáhají firmám růst",
+        "services": "Služby",
+        "company": "Firma",
+        "social": "Sociální sítě",
+        "copy": "© 2024 In Time. Všechna práva vyhrazena.",
+        "privacy": "Zásady ochrany osobních údajů",
+        "terms": "Podmínky použití"
+    },
+    "common": {
+        "back": "Zpět k projektům",
+        "step": "Krok",
+        "done": "Hotovo"
+    },
+    "caseDetails": {
+        "notFound": "Projekt nenalezen",
+        "backToCases": "Zpět k projektům",
+        "analysis": "Rozbor projektu",
+        "concept": "Koncept produktu",
+        "specs": "Vlastnosti",
+        "category": "Obor",
+        "result": "Výsledek",
+        "security": "Bezpečnost",
+        "tools": "Nástroje",
+        "challengesTitle": "Problém → Řešení",
+        "challengesDesc": "Klíčové výzvy projektu a to, jak jsme je transformovali do efektivních nástrojů řízení.",
+        "problem": "Problém",
+        "solution": "Naše řešení",
+        "interface": "Rozhraní systému",
+        "interfaceDesc": "Vizualizace pracovních procesů",
+        "ctaTitle": "Jste připraveni digitalizovat svůj podnik?",
+        "ctaDesc": "Vytváříme víc než jen aplikace – budujeme nástroje pro exponenciální růst. Pojďme probrat, které procesy ve vaší společnosti potřebují automatizaci již dnes.",
+        "ctaPrimary": "Konzultace zdarma",
+        "ctaSecondary": "Zobrazit další projekty"
+    }
+}
