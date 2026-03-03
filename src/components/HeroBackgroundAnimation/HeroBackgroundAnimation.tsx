@@ -106,7 +106,7 @@ const HeroBackgroundAnimation: React.FC = () => {
         };
     }, [theme, isMobile]);
 
-    return <div ref={containerRef} className="fixed inset-0 pointer-events-none z-[-1] opacity-40" />;
+    return <div ref={containerRef} className="fixed  inset-0 pointer-events-none z-[-1] opacity-40" />;
 };
 
 export default HeroBackgroundAnimation;
